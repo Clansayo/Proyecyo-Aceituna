@@ -1,0 +1,28 @@
+characters={
+
+	#######################
+	### COUNTRY LEADERS ###
+	#######################
+	
+	CAT_lluis_companys={
+		name="Lluís Companys"
+		portraits={
+			civilian={
+				large="GFX_portrait_cat_lluis_companys"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits = { }
+			expire="1.1.1.1"
+			
+		}
+	}
+	
+	
+	########################
+	####### ADVISORS #######
+	########################
+	
+	
+}

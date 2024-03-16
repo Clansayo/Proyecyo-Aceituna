@@ -1,0 +1,31 @@
+#####################
+##### Andalucia #####
+#####################
+
+
+AND_conflictos_jornaleros = {
+	priority = 9
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		original_tag = AND
+	}
+}
+
+AND_balance_of_power_category = {
+	icon = GFX_decision_category_power_struggle
+	
+	allowed = {
+		original_tag = AND
+	}
+	
+	priority = 90
+	
+	visible = {
+		
+	}
+}

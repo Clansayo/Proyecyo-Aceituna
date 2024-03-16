@@ -1,0 +1,9 @@
+on_actions = {
+
+	on_startup { 
+		effect = { 
+			AND = { country_event = { id = andalucia.1 } }
+		}
+	}
+
+}

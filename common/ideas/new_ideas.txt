@@ -1,0 +1,243 @@
+ideas = {
+
+	country = {
+		
+		AND_fervor_andaluz = {
+			picture = and_fervor_andaluz_icono	# esto es copiando el GFX_idea_fervor_andaluz pero le quitas el "GFX_idea", Esto viene del archivo interface/new_ideas_icons.gfx
+			
+			allowed = { tag = AND }	# tag = (pais que PUEDEN tener la idea, luego toca añadirsela)
+
+			available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1 #esto creo que da igual
+			
+			modifier = {	
+				local_resources_factor = 0.5
+				political_power_gain = 0.3
+			}
+		}
+		AND_renacer_cientifico = {
+			picture = and_renacer_cientifico
+			
+			allowed = { tag = AND }
+
+			available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1 #esto creo que da igual
+			
+			modifier = {	# 
+				research_speed_factor = 0.15
+			}
+		}
+		AND_protestas_jornaleros = {
+			picture = and_revueltas_campesinado 
+			
+			allowed = { tag = AND }
+
+			available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {}
+		}
+		
+		AND_gobierno_nuevo = {
+			picture = and_estabilidad_pocha
+			
+			allowed = { tag = AND }
+
+			available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = -0.7
+			}
+		}
+		AND_gobierno_nuevo2 = {
+			picture = and_estabilidad_pocha
+			
+			allowed = { tag = AND }
+
+			available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = -0.65
+			}
+		}
+		AND_gobierno_nuevo3 = {
+			picture = and_estabilidad_pocha
+			
+			allowed = { tag = AND }
+
+			available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = -0.6
+			}
+		}
+		AND_gobierno_nuevo4 = {
+			picture = and_estabilidad_pocha
+			
+			allowed = { tag = AND }
+
+			available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = -0.5
+			}
+		}
+		AND_gobierno_nuevo5 = {
+			picture = and_estabilidad_pocha
+			
+			allowed = { tag = AND }
+
+			available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = -0.3
+			}
+		}
+		
+		AND_desarollo_industrial_1 = {
+			picture = and_estabilidad_pocha
+			
+			allowed = { tag = AND }
+
+			available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		AND_desarollo_industrial_2 = {
+			picture = and_estabilidad_pocha
+			
+			allowed = { tag = AND }
+
+			available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.3
+			}
+		}
+		AND_desarollo_industrial_2 = {
+			picture = and_estabilidad_pocha
+			
+			allowed = { tag = AND }
+
+			available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.33
+			}
+		}
+		
+		AND_inversion_en_armamento = {
+			picture = generic_fortify_the_borders
+
+			allowed = { tag = AND }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.08
+					instant = yes
+				}
+			}
+
+			modifier = {
+				production_speed_bunker_factor = 0.25
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		
+		AND_lucha_contra_el_fascismo = {
+			picture = and_estabilidad_pocha
+			
+			allowed = { tag = AND }
+
+			available = {}
+			
+			cancel = {}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				army_attack_factor = 0.25
+			}
+		}
+		
+		
+	}
+}

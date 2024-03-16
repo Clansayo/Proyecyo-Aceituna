@@ -1,0 +1,32 @@
+﻿###########################
+# Eventos Andaluces
+###########################
+
+add_namespace = andalucia
+
+
+country_event = {		# Los efectos para añadir se miran en commands (en la wiki)
+	id = andalucia.1
+	title = "¡Andalucía libre!"
+	desc = andalucia.1.d
+	picture = GFX_report_event_ronda_1918
+	
+	# is_triggered_only = yes
+	
+	trigger = {
+		original_tag = AND
+	}
+	
+	fire_only_once = yes
+	
+	option = { 
+		name = "VIVA ANDALUCÍA LIBRE"
+		ai_chance = { factor = 90 }
+		
+	}
+	option = { 
+		name = "andalucia.1.o2"
+		ai_chance = { factor = 10 }
+		
+	}
+}

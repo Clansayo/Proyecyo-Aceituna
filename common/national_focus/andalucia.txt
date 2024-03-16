@@ -1,0 +1,2647 @@
+﻿focus_tree = {
+	id = andalusia_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 20
+			original_tag = AND
+		}
+
+	}
+	
+	default = no
+	continuous_focus_position = { x = 50 y = 2000 }
+
+	
+	#### PLAN DESARROLLO ####
+	focus = {
+		id = AND_plan_desarrollo
+		icon = GFX_goal_generic_construct_civilian
+		cost = 5
+		x = 5
+		y = 1
+		
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = AND_plan_desarrollo
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+	}
+	
+	focus = {
+		id = AND_mejorar_condiciones_mineros
+		icon = GFX_focus_generic_mining_industry
+		cost = 5
+		relative_position_id = AND_plan_desarrollo
+		x = -4
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_plan_desarrollo }
+		
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_promover_industria_minera
+		icon = GFX_goal_generic_construction2
+		cost = 5
+		relative_position_id = AND_mejorar_condiciones_mineros
+		x = 0
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_mejorar_condiciones_mineros }
+		
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 173
+			}
+			add_resource = {
+				type = aluminium
+				amount = 8
+				state = 173
+			}	
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_mejorar_condiciones_jornaleros
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		cost = 5
+		relative_position_id = AND_plan_desarrollo
+		x = -2
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_plan_desarrollo }
+		
+		completion_reward = {
+			add_days_mission_timeout  = {
+				mission = AND_revolucion_jornalera
+				days = 50
+			}
+			add_stability = 0.05
+			add_political_power = 50
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_subsidios_agricultores
+		icon = GFX_focus_generic_agricultural_subsidies	 #GFX_focus_generic_railway_gun
+		cost = 5
+		relative_position_id = AND_mejorar_condiciones_jornaleros
+		x = 0
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_mejorar_condiciones_jornaleros 	focus = AND_escuela_andaluza 	focus = AND_plan_desarrollo_industrial}
+		
+		completion_reward = {
+			add_days_mission_timeout  = {
+				mission = AND_revolucion_jornalera
+				days = 100
+			}
+			add_stability = 0.1
+			add_political_power = 50
+		}
+	}
+		
+		focus = {
+			id = AND_mejorar_carreteras_rurales
+			icon = GFX_focus_generic_railroad	 #GFX_focus_generic_railway_gun
+			cost = 5
+			relative_position_id = AND_mejorar_infraestructura
+			x = 0
+			y = 1
+			
+			available = {
+				
+			}
+			
+			prerequisite = { focus = AND_mejorar_infraestructura}
+			
+			completion_reward = {
+				if = {
+					limit = {
+						has_full_control_of_state = 169 #BAKU
+						
+					}
+					build_railway = {
+						level = 2
+						path = { 9815 4080 7098  }
+					}
+					build_railway = {
+						level = 2	
+						path = { 7098 9891 875 3871 }
+					}
+					build_railway = {
+						level = 2
+						path = { 3871 10111 4095 7196 4065 }
+					}
+					
+				}
+			}
+			
+			ai_will_do = {
+				factor = 5
+			}
+			
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+		}
+	
+	focus = {
+		id = AND_reforma_agraria
+		icon = GFX_focus_prc_agrarian_socialism
+		cost = 5
+		relative_position_id = AND_subsidios_agricultores
+		x = 0
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_subsidios_agricultores }
+		
+		completion_reward = {
+			remove_ideas = AND_protestas_jornaleros
+
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_plan_de_alfabetizacion
+		icon = GFX_focus_generic_university_1
+		cost = 5
+		relative_position_id = AND_reforma_agraria
+		x = 0
+		y = 1
+		
+		
+		prerequisite = { focus = AND_reforma_agraria }
+		prerequisite = { focus = AND_ampliar_universidad_granada }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = AND_plan_de_alfabetizacion
+				bonus = 1.0
+				uses = 2
+				category = industry
+
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	
+	focus = {
+		id = AND_escuela_andaluza
+		icon = GFX_focus_research
+		cost = 5
+		relative_position_id = AND_plan_desarrollo
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = AND_plan_desarrollo }
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_plan_desarrollo_industrial
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 5
+		relative_position_id = AND_plan_desarrollo
+		x = 2
+		y = 1
+		
+
+		prerequisite = { focus = AND_plan_desarrollo }
+		
+		completion_reward = {
+			
+			add_tech_bonus = {
+				name = AND_plan_desarrollo_industrial
+				bonus = 1.0
+				uses = 2
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
+			add_ideas = GER_autarky_idea
+		
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_mejorar_infraestructura
+		icon = GFX_focus_generic_industry_2
+		cost = 5
+		relative_position_id = AND_plan_desarrollo
+		x = 6
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_plan_desarrollo }
+		
+		completion_reward = {
+			789 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			173 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			169 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_promover_investigacion
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 5
+		relative_position_id = AND_escuela_andaluza
+		x = 0
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_escuela_andaluza 	focus = AND_plan_desarrollo_industrial 	focus = AND_mejorar_condiciones_jornaleros }
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = AND_renacer_cientifico
+				days = 365
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_nueva_industria
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 5
+		relative_position_id = AND_plan_desarrollo_industrial
+		x = 0
+		y = 1
+		
+		prerequisite = { focus = AND_plan_desarrollo_industrial }
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_ampliar_universidad_granada
+		icon = GFX_focus_generic_university_2
+		cost = 5
+		relative_position_id = AND_promover_investigacion
+		x = 0
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_promover_investigacion }
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_mejorar_gestion_recursos
+		icon = GFX_goal_generic_consumer_goods
+		cost = 5
+		relative_position_id = AND_nueva_industria
+		x = 0
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_nueva_industria }
+		
+		completion_reward = {
+			add_ideas = AND_desarollo_industrial_1
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_comenzar_militarizacion
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5
+		relative_position_id = AND_plan_desarrollo_industrial
+		x = 2
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_plan_desarrollo_industrial }
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_aumentar_industria_militar
+		icon = GFX_focus_generic_reorient_production
+		cost = 5
+		relative_position_id = AND_armas_mas_armas
+		x = 0
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_armas_mas_armas }
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_mas_fabricas_civiles
+		icon = GFX_goal_generic_construction
+		cost = 5
+		relative_position_id = AND_mejorar_gestion_recursos
+		x = 0
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_mejorar_gestion_recursos }
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_armas_mas_armas
+		icon = GFX_focus_focus_fra_maquis
+		cost = 5
+		relative_position_id = AND_comenzar_militarizacion
+		x = 0
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_comenzar_militarizacion }
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = AND_inversion_en_armamento
+				days = 720
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_un_pueblo_desarrollado
+		icon = GFX_goal_generic_consumer_goods
+		cost = 5
+		relative_position_id = AND_plan_de_alfabetizacion
+		x = 0
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_plan_de_alfabetizacion focus = AND_aumentar_industria_militar focus = AND_mas_fabricas_civiles}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AND_desarollo_industrial_1
+				add_idea = AND_desarollo_industrial_2
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_ingienieria_andaluza
+		icon = GFX_goal_generic_production2
+		cost = 5
+		relative_position_id = AND_mas_fabricas_civiles
+		x = 1
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_mas_fabricas_civiles}
+		prerequisite = { focus = AND_aumentar_industria_militar}
+		
+		completion_reward = {
+			add_tech_bonus = {
+					name = AND_ingienieria_andaluza
+					bonus = 1.0
+					uses = 2
+					category = industry
+					category = electronics
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_investigar_coheteria
+		icon = GFX_focus_rocketry
+		cost = 5
+		relative_position_id = AND_un_pueblo_desarrollado
+		x = 1
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_ingienieria_andaluza}
+		prerequisite = { focus = AND_un_pueblo_desarrollado}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = AND_investigar_coheteria
+				bonus = 1.0
+				uses = 2
+				category = rocketry
+			}
+			add_tech_bonus = {
+				name = AND_investigar_coheteria
+				bonus = 1.0
+				uses = 2
+				category = jet_technology
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_investigar_nuclear
+		icon = GFX_focus_wonderweapons
+		cost = 5
+		relative_position_id = AND_un_pueblo_desarrollado
+		x = 4
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_ingienieria_andaluza}
+		prerequisite = { focus = AND_un_pueblo_desarrollado}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = AND_investigar_nuclear
+				bonus = 1
+				uses = 2
+				category = nuclear
+				category = rocketry
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	
+	
+	######    ######   ######  ######	######    ######   ######	######    ######   ######	
+	#### ARBOL IDENTIDAD ANDALUZA ####
+	
+	focus = {
+		id = AND_regionalismo_andaluz
+		icon = GFX_andalusian_epic_flag
+		cost = 5
+		x = 15
+		y = 1
+	
+		available = {
+			
+		}
+		
+		completion_reward = {
+			add_political_power = 120
+			set_power_balance = {	#Añade lo de balance entre unionistas y separatistas
+				id = AND_centralization_bop
+			}
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+	}
+	
+	focus = {
+		id = AND_discurso_blas_infante
+		icon = GFX_goal_generic_national_unity
+		cost = 5
+		relative_position_id = AND_regionalismo_andaluz
+		x = -1
+		y = 1
+		
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_regionalismo_andaluz }
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AND_gobierno_nuevo
+				add_idea = AND_gobierno_nuevo2
+			}
+			add_political_power = 60
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no 
+
+	}
+	
+	focus = {
+		id = AND_formalizar_milicias
+		icon = GFX_focus_secret_rearmament
+		cost = 5
+		relative_position_id = AND_regionalismo_andaluz
+		x = 1
+		y = 1
+		
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_regionalismo_andaluz }
+		
+		completion_reward = {
+			army_experience = 20
+			navy_experience = 5			
+			air_experience = 5
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+	}
+	
+	focus = {
+		id = AND_crear_ejercito_profesional
+		icon = GFX_focus_generic_little_entente #GFX_focus_generic_little_entente
+		cost = 5
+		relative_position_id = AND_formalizar_milicias
+		x = 0
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_formalizar_milicias }
+		
+		completion_reward = {
+			
+			division_template = {
+				name = "División de Infantería" 		# Infantry Brigade - Used for smaller garrison units
+				#division_names_group = AND_GAR_01
+
+				regiments = {
+					infantry = { x = 0 y = 0 }	
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }	
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 2 y = 0 }	
+					infantry = { x = 2 y = 1 }
+				}
+				support = {}
+			}
+			
+			division_template = {
+				name = "Brigada de Infantería" 		# Infantry Brigade - Used for smaller garrison units
+				#division_names_group = AND_GAR_01
+				priority = 0 
+				regiments = {
+					infantry = { x = 0 y = 0 }	
+					infantry = { x = 0 y = 1 }	
+					infantry = { x = 1 y = 0 }	
+					infantry = { x = 1 y = 1 }	
+				}
+				support = {
+					engineer = { x = 0 y = 0 }   # Eng Bn
+				}
+			}
+			
+			division_template = {
+				name = "Montañeros Granaíno"  		# Mountain Brigades were 2x2 Rgts + support
+				#division_names_group = AND_MNT_01
+				regiments = {
+					mountaineers = { x = 0 y = 0 }	
+					mountaineers = { x = 0 y = 1 }
+					mountaineers = { x = 1 y = 0 }
+					mountaineers = { x = 1 y = 1 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }  # Spanish Arty Rgt/Bge had 2 Bn 105mm arty
+				}
+			}
+			
+			#Ahora sumoneo de las cosas
+			
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 94 }
+				create_unit = {
+					division = "name = \"1 Brigada de Infantería Andaluza\" division_template = \"Brigada de Infantería\" start_experience_factor = 1.0" 
+					owner = AND
+				}
+			}
+			173 = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 94 }
+				create_unit = {
+					division = "name = \"1 Montañeros Granaíno\" division_template = \"Montañeros Granaíno\" start_experience_factor = 1.0" 
+					owner = AND
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 94 }
+				create_unit = {
+					division = "name = \"1 Brigada de Infantería Andaluza\" division_template = \"Brigada de Infantería\" start_experience_factor = 1.0" 
+					owner = AND
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_pan_aceite
+		icon = GFX_pan_y_aceite
+		cost = 5
+		relative_position_id = AND_discurso_blas_infante
+		x = 0
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_discurso_blas_infante }
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AND_gobierno_nuevo2
+				add_idea = AND_gobierno_nuevo3
+			}
+			add_manpower = 30000
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	focus = {
+		id = AND_por_and_y_la_humanidad
+		icon = GFX_por_la_humanidad
+		cost = 5
+		relative_position_id = AND_pan_aceite
+		x = 1
+		y = 1
+		
+		available = {
+			
+		}
+		
+		prerequisite = { focus = AND_pan_aceite }
+		prerequisite = { focus = AND_crear_ejercito_profesional }
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AND_gobierno_nuevo3
+				add_idea = AND_gobierno_nuevo4
+			}
+			add_ideas = { 
+				AND_fervor_andaluz 
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	
+	
+	
+	######    ######   ######	######    ######   ######	######    ######   ######	######    ######   ######	
+	#### Rumbo Político ####
+	focus = {
+		id = AND_rumbo_politico
+		icon = GFX_goal_generic_improve_relations
+		cost = 5
+		x = 24
+		y = 1
+	
+		available = {
+			has_completed_focus = AND_por_and_y_la_humanidad
+		}
+		completion_reward = {
+			add_political_power = 120
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_constitucion_sobra
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 5
+		relative_position_id = AND_rumbo_politico
+		x = 5
+		y = 1
+		
+		mutually_exclusive = { focus = AND_nueva_constitucion }
+		available = {
+		}
+		
+		prerequisite = { focus = AND_rumbo_politico }
+		
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_nueva_constitucion
+		icon = GFX_focus_generic_treaty
+		cost = 5
+		relative_position_id = AND_rumbo_politico
+		x = -5
+		y = 1
+		
+		mutually_exclusive = { focus = AND_constitucion_sobra }
+		available = {
+			#NOT {has_idea = AND_protestas_jornaleros}
+			#is_power_balance_in_range = {
+			#	id = AND_centralization_bop
+			#	range < and_gobierno_independentista
+			#}
+		}
+		
+		
+		prerequisite = { focus = AND_rumbo_politico }
+		
+		completion_reward = {
+			add_manpower = 10
+			remove_ideas = { AND_gobierno_nuevo4 }
+			hidden_effect = {
+				remove_ideas = { AND_gobierno_nuevo  }
+				remove_ideas = { AND_gobierno_nuevo2 }
+				remove_ideas = { AND_gobierno_nuevo3 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_bastion_democratico
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 5
+		relative_position_id = AND_nueva_constitucion
+		x = 0
+		y = 1
+		
+		available = {
+		
+		}
+		
+		prerequisite = { focus = AND_nueva_constitucion }
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			add_political_power = 200
+			add_ideas = CZE_democratic_bastion
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_repasar_estatuto_autonomia
+		icon = GFX_focus_generic_improve_the_administration
+		cost = 5
+		relative_position_id = AND_constitucion_sobra
+		x = -6
+		y = 1
+		
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility	#Intento hacer que se esconda el focus pero no va :(
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = AND_la_revolucion_es_la_solucion
+				}
+			}
+		}
+		available = {
+			NOT {has_idea = AND_protestas_jornaleros}
+			is_power_balance_in_range = {
+				id = AND_centralization_bop
+				range > and_tendencia_unionista
+			}
+		}
+		
+		mutually_exclusive = { focus = AND_la_revolucion_es_la_solucion }
+		prerequisite = { focus = AND_constitucion_sobra }
+		mutually_exclusive = { focus = AND_fascismo_truco }
+		mutually_exclusive = { focus = AND_lo_clasico }
+		mutually_exclusive = { focus = AND_el_anarquismo_andaluz }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_la_revolucion_es_la_solucion
+		icon = GFX_focus_generic_join_comintern
+		cost = 5
+		relative_position_id = AND_constitucion_sobra
+		x = 1
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_constitucion_sobra }
+		mutually_exclusive = { focus = AND_repasar_estatuto_autonomia }
+		mutually_exclusive = { focus = AND_fascismo_truco }
+		mutually_exclusive = { focus = AND_lo_clasico }
+		mutually_exclusive = { focus = AND_el_anarquismo_andaluz }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_fascismo_truco
+		icon = GFX_goal_support_fascism
+		cost = 5
+		relative_position_id = AND_constitucion_sobra
+		x = 12
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_constitucion_sobra }
+		mutually_exclusive = { focus = AND_repasar_estatuto_autonomia }
+		mutually_exclusive = { focus = AND_la_revolucion_es_la_solucion }
+		mutually_exclusive = { focus = AND_lo_clasico }
+		mutually_exclusive = { focus = AND_el_anarquismo_andaluz }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_lo_clasico
+		icon = GFX_goal_generic_demand_territory
+		cost = 5
+		relative_position_id = AND_constitucion_sobra
+		x = 25
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_constitucion_sobra }
+		mutually_exclusive = { focus = AND_repasar_estatuto_autonomia }
+		mutually_exclusive = { focus = AND_la_revolucion_es_la_solucion }
+		mutually_exclusive = { focus = AND_fascismo_truco }
+		mutually_exclusive = { focus = AND_el_anarquismo_andaluz }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_el_anarquismo_andaluz
+		icon = GFX_anarquismo_andalu
+		cost = 5
+		relative_position_id = AND_constitucion_sobra
+		x = 38
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_constitucion_sobra }
+		mutually_exclusive = { focus = AND_repasar_estatuto_autonomia }
+		mutually_exclusive = { focus = AND_la_revolucion_es_la_solucion }
+		mutually_exclusive = { focus = AND_fascismo_truco }
+		mutually_exclusive = { focus = AND_lo_clasico }
+		
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_consolidar_independencia
+		icon = GFX_andaluciaBandera2
+		cost = 5
+		relative_position_id = AND_bastion_democratico
+		x = 0
+		y = 1
+		
+		available = {
+		
+		}
+		
+		prerequisite = { focus = AND_bastion_democratico }
+		
+		completion_reward = {
+			add_war_support = 0.15
+			set_rule = { can_create_factions = yes }
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_andalucia_es_españa
+		icon = GFX_and_x_esp 
+		cost = 5
+		relative_position_id = AND_repasar_estatuto_autonomia
+		x = 0
+		y = 1
+		
+		
+		available = {
+			is_power_balance_in_range = {
+				id = AND_centralization_bop
+				range > and_gobierno_influenciado_por_unionistas
+			}
+		}
+		
+		prerequisite = { focus = AND_repasar_estatuto_autonomia }
+		
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_expropiar_latifundios
+		icon = GFX_anarquismo_andalu 	#GFX_goal_tripartite_pact
+		cost = 5
+		relative_position_id = AND_la_revolucion_es_la_solucion
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_la_revolucion_es_la_solucion }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_requisar_bienes_eclesiasticos
+		icon = GFX_requisar_bienes_eclesiasticos
+		cost = 5
+		relative_position_id = AND_la_revolucion_es_la_solucion
+		x = 5
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_la_revolucion_es_la_solucion }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_economia_socialista
+		icon = GFX_focus_generic_soviet_politics
+		cost = 5
+		relative_position_id = AND_la_revolucion_es_la_solucion
+		x = 3
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_la_revolucion_es_la_solucion }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_partido_nacionalista
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_fascismo_truco
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_fascismo_truco }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_la_monarquia
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 5
+		relative_position_id = AND_lo_clasico
+		x = -2
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_lo_clasico }
+		mutually_exclusive = { focus = AND_volver_a_las_raices }
+
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_volver_a_las_raices
+		icon = GFX_and_icono_omeya
+		cost = 5
+		relative_position_id = AND_lo_clasico
+		x = 7
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_lo_clasico }
+		mutually_exclusive = { focus = AND_la_monarquia }
+
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_acercarse_a_las_democracias
+		icon = GFX_and_acercarse_alidados
+		cost = 5
+		relative_position_id = AND_consolidar_independencia
+		x = 0
+		y = 1
+		
+		available = {
+		
+		}
+		
+		prerequisite = { focus = AND_consolidar_independencia }
+		
+		completion_reward = {
+			ENG = {
+				if { 
+					limit {
+						has_government = democratic
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = AND_andalucia_se_acerca_democracias
+					}
+				}
+			}
+			FRA = {
+				if { 
+					limit {
+						has_government = democratic
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = AND_andalucia_se_acerca_democracias
+					}
+				}
+			}
+			CAT = {
+				if { 
+					limit {
+						has_government = democratic
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = AND_andalucia_se_acerca_democracias
+					}
+				}
+			}
+			NAV = {
+				if { 
+					limit {
+						has_government = democratic
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = AND_andalucia_se_acerca_democracias
+					}
+				}
+			}
+			GLC = {
+				if { 
+					limit {
+						has_government = democratic
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = AND_andalucia_se_acerca_democracias
+					}
+				}
+			}
+			ITA = {
+				if { 
+					limit {
+						has_government = democratic
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = AND_andalucia_se_acerca_democracias
+					}
+				}
+			}
+			GER = {
+				if { 
+					limit {
+						has_government = democratic
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = AND_andalucia_se_acerca_democracias
+					}
+				}
+			}
+			
+			BEL = {
+				if { 
+					limit {
+						has_government = democratic
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = AND_andalucia_se_acerca_democracias
+					}
+				}
+			}
+			HOL = {
+				if { 
+					limit {
+						has_government = democratic
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = AND_andalucia_se_acerca_democracias
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_discursos_democraticos
+		icon = GFX_goal_support_democracy 
+		cost = 5
+		relative_position_id = AND_andalucia_es_españa
+		x = 0
+		y = 1
+		
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_andalucia_es_españa }
+		
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_modelo_sovietico
+		icon = GFX_focus_SOV_the_path_of_marxism_leninism 	#GFX_goal_tripartite_pact
+		cost = 5
+		relative_position_id = AND_expropiar_latifundios
+		x = -1
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_expropiar_latifundios }
+		mutually_exclusive = { focus = AND_camino_andaluz }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_camino_andaluz
+		icon = GFX_andalucia_comunismo1 	#GFX_goal_tripartite_pact
+		cost = 5
+		relative_position_id = AND_expropiar_latifundios
+		x = 1
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_expropiar_latifundios }
+		mutually_exclusive = { focus = AND_modelo_sovietico }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_el_opio_del_pueblo
+		icon = GFX_and_opio_del_pueblo
+		cost = 5
+		relative_position_id = AND_requisar_bienes_eclesiasticos
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_requisar_bienes_eclesiasticos }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_nacionalizar_industria
+		icon = GFX_goal_generic_soviet_construction
+		cost = 5
+		relative_position_id = AND_economia_socialista
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_economia_socialista }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_Andalucia_grande_y_libre
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_partido_nacionalista
+		x = -2
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_partido_nacionalista }
+		mutually_exclusive = { focus = AND_viva_and_y_esp }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_viva_and_y_esp
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_partido_nacionalista
+		x = 2
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_partido_nacionalista }
+		mutually_exclusive = { focus = AND_Andalucia_grande_y_libre }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_buscar_rey
+		icon = GFX_focus_generic_monarchy_2
+		cost = 5
+		relative_position_id = AND_la_monarquia
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_la_monarquia }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_preparar_el_cambio
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_volver_a_las_raices
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_volver_a_las_raices }
+
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_condenar_el_fascismo_español
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		cost = 5
+		relative_position_id = AND_acercarse_a_las_democracias
+		x = 0
+		y = 1
+		
+		available = {
+		
+		}
+		
+		prerequisite = { focus = AND_acercarse_a_las_democracias }
+		
+		completion_reward = {
+			add_ideas = { anti_fascist_army_idea }
+			SPR = {
+				if { 
+					limit {
+						has_government = fascism
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = AND_andalucia_condena_fascismo_español
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_llevar_la_democracia_a_españa
+		icon = GFX_focus_generic_attack_nationalist_spain_focus
+		cost = 5
+		relative_position_id = AND_condenar_el_fascismo_español
+		x = 0
+		y = 1
+		
+		available = {
+			NOT { SPR = { has_government = democratic } }
+		}
+		
+		prerequisite = { focus = AND_condenar_el_fascismo_español }
+		
+		completion_reward = {
+			add_timed_idea { 
+				idea = AND_lucha_contra_el_fascismo 
+				days = 365
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SPR
+				expire = 0
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_pedir_unirse_aliados
+		icon = GFX_focus_chi_british_cooperation 
+		cost = 5
+		relative_position_id = AND_acercarse_a_las_democracias
+		x = 2
+		y = 1
+		
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_acercarse_a_las_democracias focus = AND_discursos_democraticos  }
+		
+		completion_reward = {
+			
+		}
+		 
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_volver_a_españa
+		icon = GFX_focus_spr_war_of_independence 
+		cost = 5
+		relative_position_id = AND_discursos_democraticos
+		x = 0
+		y = 1
+		
+		
+		available = {
+			is_power_balance_in_range = {
+				id = AND_centralization_bop
+				range > and_gobierno_unionista
+			}
+		}
+		
+		prerequisite = { focus = AND_discursos_democraticos }
+		
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_unirse_comintern
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 5
+		relative_position_id = AND_modelo_sovietico
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_modelo_sovietico }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_trabajadores_de_iberia_unios
+		icon = GFX_focus_por_workers_of_iberia
+		cost = 5
+		relative_position_id = AND_camino_andaluz
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_camino_andaluz }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_buscar_apoyos_mineros
+		icon = GFX_focus_generic_workers
+		cost = 5
+		relative_position_id = AND_expropiar_latifundios
+		x = -3
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_expropiar_latifundios }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_integrar_anarquistas
+		icon = GFX_focus_ITA_peasants_rise
+		cost = 5
+		relative_position_id = AND_buscar_apoyos_mineros
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_buscar_apoyos_mineros }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_nacional_condenar_fascismo_español
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_Andalucia_grande_y_libre
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_Andalucia_grande_y_libre }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_promover_fascismo_españa
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_viva_and_y_esp
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_viva_and_y_esp }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_casa_medinia_sidonia
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_buscar_rey
+		x = -5
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_buscar_rey }
+		mutually_exclusive = { focus = AND_orleans_y_borbon }
+		mutually_exclusive = { focus = AND_san_blas }
+		mutually_exclusive = { focus = AND_lo_que_españa_necesita }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_orleans_y_borbon
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_buscar_rey
+		x = -2
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_buscar_rey }
+		mutually_exclusive = { focus = AND_casa_medinia_sidonia }
+		mutually_exclusive = { focus = AND_san_blas }
+		mutually_exclusive = { focus = AND_lo_que_españa_necesita }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_san_blas
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_buscar_rey
+		x = 2
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_buscar_rey }
+		mutually_exclusive = { focus = AND_orleans_y_borbon }
+		mutually_exclusive = { focus = AND_casa_medinia_sidonia }
+		mutually_exclusive = { focus = AND_lo_que_españa_necesita }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_lo_que_españa_necesita
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_buscar_rey
+		x = 5
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_buscar_rey }
+		mutually_exclusive = { focus = AND_orleans_y_borbon }
+		mutually_exclusive = { focus = AND_casa_medinia_sidonia }
+		mutually_exclusive = { focus = AND_san_blas }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_llamar_al_sultan
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_preparar_el_cambio
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_preparar_el_cambio }
+
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_lucha_contra_el_fascismo
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		cost = 5
+		relative_position_id = AND_unirse_comintern
+		x = 1
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_unirse_comintern }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_invitar_a_la_union
+		icon = GFX_and_iberia_comunista
+		cost = 5
+		relative_position_id = AND_unirse_comintern
+		x = 3
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_unirse_comintern  focus = AND_trabajadores_de_iberia_unios }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_reclamar_territorios_españoles
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_nacional_condenar_fascismo_español
+		x = -3
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_nacional_condenar_fascismo_español }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_union_de_falanges_españolas
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_promover_fascismo_españa
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_promover_fascismo_españa }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_imponer_el_orden
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_casa_medinia_sidonia
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_casa_medinia_sidonia }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_solidificar_legitimidad
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_orleans_y_borbon
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_orleans_y_borbon }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_andalucia_por_la_humanidad
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_san_blas
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_san_blas }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_el_legítimo_rey
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_lo_que_españa_necesita
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_lo_que_españa_necesita }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_cuestion_religiosa
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_llamar_al_sultan
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_llamar_al_sultan }
+
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_marruecos_para_el_sultan
+		icon = asdasd
+		cost = 5
+		relative_position_id = AND_llamar_al_sultan
+		x = 2
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_llamar_al_sultan }
+
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_invitar_a_la_union
+		icon = GFX_and_iberia_comunista
+		cost = 5
+		relative_position_id = AND_invitar_a_la_union
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_invitar_a_la_union }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+}

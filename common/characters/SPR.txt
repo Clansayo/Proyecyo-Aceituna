@@ -1,0 +1,23 @@
+characters={
+
+	
+	SPR_junta_militar={
+		instance = {
+			allowed = {
+				
+			}
+			name=SPR_junta_militar
+			portraits={
+				civilian={
+					large="GFX_portrait_spa_military_junta"
+				}
+			}
+			country_leader={
+				ideology=falangism
+				traits={ indecisive }
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+spriteTypes = {	
+
+	# En este archivo se asigna un nombre a cada icono personalizado para las ideas.
+
+	spriteType = {
+		name = "GFX_idea_and_fervor_andaluz_icono"	 #Nombre del icono importante el GFX_idea
+		texturefile = "gfx/interface/ideas/idea_fervor_andaluz.dds"		#Importante que tenga el nombre idea_ noseque
+	}
+	
+	spriteType = {
+		name = "GFX_idea_and_revueltas_campesinado"	 #Nombre del icono importante el GFX_idea
+		texturefile = "gfx/interface/ideas/idea_campesinos_andaluces.dds"		#Importante que tenga el nombre idea_ noseque
+	}
+	
+	spriteType = {
+		name = "GFX_idea_and_estabilidad_pocha"	 #Nombre del icono importante el GFX_idea
+		texturefile = "gfx/interface/ideas/idea_estabilidad_bruh.dds"		#Importante que tenga el nombre idea_ noseque
+	}
+	
+	spriteType = {
+		name = "GFX_idea_and_renacer_cientifico"	 #Nombre del icono importante el GFX_idea
+		texturefile = "gfx/interface/ideas/idea_renacer_cientifico.dds"		#Importante que tenga el nombre idea_ noseque
+	}
+
+}

@@ -1,0 +1,62 @@
+
+# Decisiones andalucia
+
+AND_balance_of_power_category = { 
+	
+	DEBUG_prueba_1 = {
+		priority = 4
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			
+		}
+	}
+}
+
+AND_conflictos_jornaleros = {
+
+	AND_revolucion_jornalera = { 
+		allowed = { tag = AND }
+
+		icon = POL_looming_peasants_strike
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 365
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			has_completed_focus = AND_reforma_agraria
+		}
+		
+		activation = {
+			has_idea = AND_protestas_jornaleros
+		}
+
+		visible = {
+			has_idea = AND_protestas_jornaleros
+		}
+		
+		cancel_effect = {
+			
+		}
+
+		timeout_effect = {
+			start_civil_war = {
+				ideology = democratic
+				size = 0.6
+				capital = 169
+				states = { 
+					169
+				}
+			}
+		}
+	
+	}
+	
+
+}

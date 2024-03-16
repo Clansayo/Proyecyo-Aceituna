@@ -1,0 +1,27 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = regionalismos_news
+
+# ejemplo noticia
+news_event = {
+	id = regionalismos_news.1
+	title = regionalismos_news.1.t
+	desc = regionalismos_news.1.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = regionalismos_news.1.b
+	}
+
+
+}
+
+
+
+

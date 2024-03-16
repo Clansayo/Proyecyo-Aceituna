@@ -1,0 +1,93 @@
+
+#Esto va en lar_on_actions.txt	pa eliminar un lider y eso
+#Clean up Primo de Rivera in case of already dead
+				if = {
+					limit = {
+						has_country_leader = {
+							character = SPA_jose_antonio_primo_de_rivera
+							ruling_only = yes
+						}
+						FROM = {
+							has_completed_focus = SPA_martyrdom_for_primo_de_rivera
+						}
+					}
+					retire_country_leader = yes
+				}
+				
+	para gestionar guerra civil igual va bien ver los archivos 05_lar_on_actions.txt entre otros para ver como lo gestiona el juego
+	
+	
+#Esto es algo al anexionar
+#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
+	on_annex = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = scw_over
+					FROM = {
+						tag = SPA
+					}
+				}
+				every_owned_state = {
+					limit = {
+						has_state_flag = SPR_sided_with_republicans_flag
+						NOT = {
+							is_core_of = SPA
+						}
+					}
+					add_core_of = SPA
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = scw_over
+					FROM = {
+						tag = SPB
+					}
+				}
+				every_owned_state = {
+					limit = {
+						has_state_flag = SPR_sided_with_republicans_flag
+						NOT = {
+							is_core_of = SPB
+						}
+					}
+					add_core_of = SPB
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = scw_over
+					FROM = {
+						tag = SPC
+					}
+				}
+				every_owned_state = {
+					limit = {
+						has_state_flag = SPR_sided_with_nationalists_flag
+						NOT = {
+							is_core_of = SPC
+						}
+					}
+					add_core_of = SPC
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = scw_over
+					FROM = {
+						tag = SPD
+					}
+				}
+				every_owned_state = {
+					limit = {
+						has_state_flag = SPR_sided_with_nationalists_flag
+						NOT = {
+							is_core_of = SPD
+						}
+					}
+					add_core_of = SPD
+				}
+			}
+		}
+	}

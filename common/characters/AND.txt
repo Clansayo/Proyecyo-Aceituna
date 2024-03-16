@@ -1,0 +1,103 @@
+characters={
+
+	#######################
+	### COUNTRY LEADERS ###
+	#######################
+	
+	AND_blas_infante={
+		name="Blas Infante"
+		portraits={
+			civilian={
+				large="GFX_portrait_and_blas_infante"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits = { great_architect }
+			expire="1.1.1.1"
+			
+		}
+	}
+	AND_blas_i_de_andalucia={
+		name=AND_BLAS_I_ANDALUZ
+		portraits={
+			civilian={
+				large="GFX_portrait_and_blas_i"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	AND_mohamed_v={
+		name="Mohamed V"
+		portraits={
+			civilian={
+				large="GFX_portrait_and_mohamed_V"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	AND_jose_diaz={
+		name="José Diaz"
+		portraits={
+			civilian={
+				large="GFX_portrait_and_jose_diaz"
+				small="GFX_portrait_and_jose_diaz_small"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			
+			allowed  = {
+				original_tag  = AND
+			}
+			available  = {}
+			traits  = {
+				communist_revolutionary 
+			}
+			do_effect  = {
+				NOT  = {
+					has_government  = communism 
+				}
+			}
+			ai_will_do  = {
+				factor  = 1.0
+			}
+		}
+	}
+	
+	AND_jose_enrique_varela={
+		name="José Enrique Varela"
+		portraits={
+			civilian={
+				large="GFX_portrait_and_jose_enrique_varela"
+			}
+		}
+		country_leader={
+			ideology=falangism
+			expire="1.1.1.1"
+			id=-1
+		}
+		
+	}
+	
+	
+	########################
+	####### ADVISORS #######
+	########################
+	
+	
+}

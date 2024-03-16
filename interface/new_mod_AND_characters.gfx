@@ -1,0 +1,35 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_portrait_and_blas_infante"
+		texturefile = "gfx/leaders/AND/portrait_Blas_Infante.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_and_blas_i"
+		texturefile = "gfx/leaders/AND/portrait_Blas_Rey.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_and_jose_diaz"
+		texturefile = "gfx/leaders/AND/portrait_jose_diaz.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_and_jose_enrique_varela"
+		texturefile = "gfx/leaders/AND/portrait_Jose_Enrique.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_and_mohamed_V"
+		texturefile = "gfx/leaders/AND/portrait_mohamed_V.dds"
+	}
+	
+	#Sprite Advisor:
+	spriteType = {
+		name = "GFX_portrait_and_jose_diaz_small"
+		texturefile = "gfx/characters/portrait_jose_diaz_small.dds"
+	}
+	
+
+}

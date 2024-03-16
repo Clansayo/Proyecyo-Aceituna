@@ -1,0 +1,10 @@
+﻿###########################
+# Spanish Events
+###########################
+
+add_namespace = spain
+
+# Spanish Civil War
+country_event = {
+	
+}

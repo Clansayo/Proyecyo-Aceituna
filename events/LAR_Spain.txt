@@ -1,0 +1,5 @@
+﻿add_namespace = lar_spain 
+
+# Election of 1936 - La Resistance Edition
+country_event = {
+}
