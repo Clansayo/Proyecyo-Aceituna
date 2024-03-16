@@ -62,5 +62,10 @@ spriteTypes = {
 	name = "GFX_and_iberia_comunista"
 	texturefile = "gfx/interface/goals/focus_AND_comunistaIberia.dds"			
 	}
+	
+	SpriteType = {
+	name = "GFX_and_conflicto_religioso"
+	texturefile = "gfx/interface/goals/millennium_dawn/religion/NIG_fifty_fifty.dds"			
+	}
 
 }

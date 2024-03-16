@@ -2566,7 +2566,7 @@
 	
 	focus = {
 		id = AND_cuestion_religiosa
-		icon = asdasd
+		icon = GFX_and_conflicto_religioso
 		cost = 5
 		relative_position_id = AND_llamar_al_sultan
 		x = 0
