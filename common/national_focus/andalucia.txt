@@ -1429,7 +1429,7 @@
 		icon = GFX_requisar_bienes_eclesiasticos
 		cost = 5
 		relative_position_id = AND_la_revolucion_es_la_solucion
-		x = 5
+		x = 6
 		y = 1
 		
 		available = {
@@ -1455,7 +1455,7 @@
 		icon = GFX_focus_generic_soviet_politics
 		cost = 5
 		relative_position_id = AND_la_revolucion_es_la_solucion
-		x = 3
+		x = 4
 		y = 1
 		
 		available = {
@@ -1717,7 +1717,7 @@
 		icon = GFX_focus_SOV_the_path_of_marxism_leninism 	#GFX_goal_tripartite_pact
 		cost = 5
 		relative_position_id = AND_expropiar_latifundios
-		x = -1
+		x = -2
 		y = 1
 		
 		available = {
@@ -1744,7 +1744,7 @@
 		icon = GFX_andalucia_comunismo1 	#GFX_goal_tripartite_pact
 		cost = 5
 		relative_position_id = AND_expropiar_latifundios
-		x = 1
+		x = 2
 		y = 1
 		
 		available = {
@@ -2114,7 +2114,7 @@
 		icon = GFX_focus_generic_workers
 		cost = 5
 		relative_position_id = AND_expropiar_latifundios
-		x = -3
+		x = -4
 		y = 1
 		
 		available = {
@@ -2361,7 +2361,7 @@
 		icon = GFX_focus_generic_anti_fascist_diplomacy
 		cost = 5
 		relative_position_id = AND_unirse_comintern
-		x = 1
+		x = 0
 		y = 1
 		
 		available = {
@@ -2386,14 +2386,14 @@
 		id = AND_invitar_a_la_union
 		icon = GFX_and_iberia_comunista
 		cost = 5
-		relative_position_id = AND_unirse_comintern
-		x = 3
+		relative_position_id = AND_trabajadores_de_iberia_unios
+		x = 0
 		y = 1
 		
 		available = {
 		}
 		
-		prerequisite = { focus = AND_unirse_comintern  focus = AND_trabajadores_de_iberia_unios }
+		prerequisite = { focus = AND_trabajadores_de_iberia_unios }
 		
 		completion_reward = {
 			
@@ -2619,8 +2619,8 @@
 	}
 	
 	focus = {
-		id = AND_invitar_a_la_union
-		icon = GFX_and_iberia_comunista
+		id = AND_unificar_las_republicas
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
 		cost = 5
 		relative_position_id = AND_invitar_a_la_union
 		x = 0
@@ -2630,6 +2630,240 @@
 		}
 		
 		prerequisite = { focus = AND_invitar_a_la_union }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_pacto_con_la_comintern
+		icon = GFX_focus_SOV_socialism_in_one_country
+		cost = 5
+		relative_position_id = AND_unificar_las_republicas
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_unificar_las_republicas }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_extender_la_revolucion
+		icon = GFX_focus_ger_great_red_menace
+		cost = 5
+		relative_position_id = AND_subyugar_iberia
+		x = 2
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_subyugar_iberia  focus = AND_unificar_las_republicas }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_custion_africana
+		icon = GFX_and_cuestion_africana
+		cost = 5
+		relative_position_id = AND_extender_la_revolucion
+		x = -3
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_extender_la_revolucion }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_aplastar_a_los_capitalistas
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		cost = 5
+		relative_position_id = AND_extender_la_revolucion
+		x = -1
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_extender_la_revolucion }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_acabar_con_el_fascismo
+		icon = GFX_focus_ger_great_red_menace
+		cost = 5
+		relative_position_id = AND_extender_la_revolucion
+		x = 1
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_extender_la_revolucion }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_destruir_el_sueño_americano
+		icon = GFX_and_destruir_sueño_americano
+		cost = 5
+		relative_position_id = AND_extender_la_revolucion
+		x = 3
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_extender_la_revolucion }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_guiar_territorios_africanos
+		icon = GFX_focus_ger_great_red_menace
+		cost = 5
+		relative_position_id = AND_custion_africana 
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_custion_africana  }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_invitar_a_la_union
+		icon = GFX_focus_ger_great_red_menace
+		cost = 5
+		relative_position_id = AND_guiar_territorios_africanos 
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_guiar_territorios_africanos  }
+		
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+	
+	focus = {
+		id = AND_subyugar_iberia
+		icon = GFX_and_iberia
+		cost = 5
+		relative_position_id = AND_lucha_contra_el_fascismo
+		x = 0
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_lucha_contra_el_fascismo }
 		
 		completion_reward = {
 			
