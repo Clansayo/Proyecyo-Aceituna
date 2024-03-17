@@ -30,3 +30,29 @@ country_event = {		# Los efectos para añadir se miran en commands (en la wiki)
 		
 	}
 }
+
+country_event = {		# Los efectos para añadir se miran en commands (en la wiki)
+	id = andalucia.2
+	title = "andalucia_pide_union"
+	desc = andalucia.1.d
+	picture = GFX_report_event_ronda_1918
+	
+	# is_triggered_only = yes
+	
+	trigger = {
+		original_tag = SPR
+	}
+	
+	fire_only_once = yes
+	
+	option = { 
+		name = "andalucia.2.o1"
+		puppet = AND
+		ai_chance = { factor = 100 }
+	}
+	option = { 
+		name = "andalucia.2.o2"
+		ai_chance = { factor = 0 }
+		
+	}
+}

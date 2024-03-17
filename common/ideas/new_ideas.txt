@@ -238,6 +238,21 @@ ideas = {
 			}
 		}
 		
+		AND_influencia_democratica = {
+			picture = and_estabilidad_pocha
+			
+			allowed = {  }
+
+			available = {}
+			
+			cancel = {}
+			
+			
+			modifier = {
+				democratic_drift  = 0.03
+			}
+		}
+		
 		
 	}
 }

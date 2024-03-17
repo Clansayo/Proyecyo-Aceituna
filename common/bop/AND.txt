@@ -65,7 +65,7 @@ AND_centralization_bop = {
             min = 0.75
 			max = 1
             modifier = {
-                war_support_weekly = 0.2
+                war_support_weekly = 0.5
             }
         }
 		
@@ -83,7 +83,7 @@ AND_centralization_bop = {
             min = 0.25
 			max = 0.5
             modifier = {
-                war_support_weekly = 0.5
+                war_support_weekly = 0.1
             }
         }
 

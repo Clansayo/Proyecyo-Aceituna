@@ -1086,7 +1086,13 @@
 		
 		
 		completion_reward = {
-			
+		add_war_support = 0.1
+			remove_ideas = { AND_gobierno_nuevo4 }
+			hidden_effect = {
+				remove_ideas = { AND_gobierno_nuevo  }
+				remove_ideas = { AND_gobierno_nuevo2 }
+				remove_ideas = { AND_gobierno_nuevo3 }
+			}
 		}
 		
 		ai_will_do = {
@@ -1108,11 +1114,11 @@
 		
 		mutually_exclusive = { focus = AND_constitucion_sobra }
 		available = {
-			#NOT {has_idea = AND_protestas_jornaleros}
-			#is_power_balance_in_range = {
-			#	id = AND_centralization_bop
-			#	range < and_gobierno_independentista
-			#}
+			NOT {has_idea = AND_protestas_jornaleros}
+			is_power_balance_in_range = {
+				id = AND_centralization_bop
+				range < tendencia_independentista
+			}
 		}
 		
 		
@@ -1192,10 +1198,10 @@
 		}
 		available = {
 			NOT {has_idea = AND_protestas_jornaleros}
-			is_power_balance_in_range = {
-				id = AND_centralization_bop
-				range > and_tendencia_unionista
-			}
+			#is_power_balance_in_range = {
+			#	id = AND_centralization_bop
+			#	range > and_tendencia_unionista
+			#}
 		}
 		
 		mutually_exclusive = { focus = AND_la_revolucion_es_la_solucion }
@@ -1205,7 +1211,11 @@
 		mutually_exclusive = { focus = AND_el_anarquismo_andaluz }
 		
 		completion_reward = {
-			
+			add_political_power = 200
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
 		}
 		
 		ai_will_do = {
@@ -1347,7 +1357,10 @@
 		y = 1
 		
 		available = {
-		
+			is_power_balance_in_range = {
+				id = AND_centralization_bop
+				range < and_gobierno_influenciado_por_independentistas
+			}
 		}
 		
 		prerequisite = { focus = AND_bastion_democratico }
@@ -1376,17 +1389,27 @@
 		
 		
 		available = {
-			is_power_balance_in_range = {
-				id = AND_centralization_bop
-				range > and_gobierno_influenciado_por_unionistas
-			}
+			#is_power_balance_in_range = {
+			#	id = AND_centralization_bop
+			#	range > and_gobierno_influenciado_por_unionistas
+			#}
 		}
 		
 		prerequisite = { focus = AND_repasar_estatuto_autonomia }
 		
 		
 		completion_reward = {
-			
+			SPR {
+				add_timed_idea {
+					idea = AND_influencia_democratica
+					days = 365
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.1
+				}
+				
+			}
 		}
 		
 		ai_will_do = {
@@ -1700,7 +1723,11 @@
 		
 		
 		completion_reward = {
-			
+			add_ideas = { anti_fascist_army_idea }
+			add_timed_idea {
+				idea = AND_influencia_democratica
+				days = 356
+			}
 		}
 		
 		ai_will_do = {
@@ -1973,6 +2000,10 @@
 		
 		available = {
 			NOT { SPR = { has_government = democratic } }
+			is_power_balance_in_range = {
+				id = AND_centralization_bop
+				range < and_gobierno_independentista
+			}
 		}
 		
 		prerequisite = { focus = AND_condenar_el_fascismo_español }
@@ -2035,17 +2066,18 @@
 		
 		
 		available = {
-			is_power_balance_in_range = {
-				id = AND_centralization_bop
-				range > and_gobierno_unionista
-			}
+			SPR = { has_government = democratic }
+			#is_power_balance_in_range = {
+			#	id = AND_centralization_bop
+			#	range > and_gobierno_unionista
+			#}
 		}
 		
 		prerequisite = { focus = AND_discursos_democraticos }
 		
 		
 		completion_reward = {
-			
+			SPR = { country_event = andalucia.2 }
 		}
 		
 		ai_will_do = {
@@ -2750,7 +2782,7 @@
 	
 	focus = {
 		id = AND_acabar_con_el_fascismo
-		icon = GFX_focus_ger_great_red_menace
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
 		cost = 5
 		relative_position_id = AND_extender_la_revolucion
 		x = 1
@@ -2802,7 +2834,7 @@
 	
 	focus = {
 		id = AND_guiar_territorios_africanos
-		icon = GFX_focus_ger_great_red_menace
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		cost = 5
 		relative_position_id = AND_custion_africana 
 		x = 0
@@ -2828,7 +2860,7 @@
 	
 	focus = {
 		id = AND_invitar_a_la_union
-		icon = GFX_focus_ger_great_red_menace
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
 		cost = 5
 		relative_position_id = AND_guiar_territorios_africanos 
 		x = 0
