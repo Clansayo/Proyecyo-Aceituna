@@ -3,3 +3,15 @@
  #evento1 descripcion: andalucia.1 "¡Andalucía libre!"
  andalucia.1.d:0 "Tras la masacre de Casas Viejas en 1933, el regionalismo andaluz se vió fortalecido y dirigido en contra del gobierno republicano. Tras varios intentos de conseguir una mayor autonomía, se formuló el estatuto de autonomía andaluz gracias en parte a la labor de Blas Infante. Al mismo tiempo, otros gobiernos autonómicos aparecieron en otras regiones de España. Debido a estos cambios y a la inestabilidad del gobierno republicano, un grupo de militares organizan un golpe de estado tomando el control del gobierno. A lo que el recien gobierno autonómico de cataluña reclama la completa independencia, a lo que le siguen Andalucía, Pais Vasco y Galicia"
  andalucia.1.o2:0 "Van a ser tiempos difíciles..."
+ 
+ #Union andalucia españa democracito:
+ andalucia_pide_union:0 "Andalucía pide unirse a España"
+ andalucia.2.d:0 "¡Andalucía se acerca democrácticamente a nuestra nación!. El sentimiento español por parte de los andaluces se ha hecho manifiesto. El acuerdo de integrar la región de andalucía al Estado Español está siendo negociado. Los andaluces piden una alta autonomía, incluso mayor a la de su previo estatuto de autonomía. ¿Deberíamos llegar a un acuerdo?"
+ andalucia.2.o1:0 "Bienvenidos de nuevo a España"
+ andalucia.2.o2:0 "Este no es el camino"
+ 
+ #Andalucia negcia entrar a los aliados:
+ andalucia_event_3:0 "Negociar unirse a los aliados."
+ andalucia.3.d:0 "Debemos entrar a los aliados para proteger la democracia del mundo. No obstante, este movimiento supondrá un gran riesgo para los andaluces. ¿Debemos pedir algo a cambio?"
+ andalucia.3.o1:0 "Exigir Gibraltar"
+ andalucia.3.o2:0 "No podemos arriesgarnos"

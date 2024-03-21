@@ -31,11 +31,11 @@ country_event = {		# Los efectos para añadir se miran en commands (en la wiki)
 	}
 }
 
-country_event = {		# Los efectos para añadir se miran en commands (en la wiki)
+country_event = {		# Andalucia se une a españa
 	id = andalucia.2
-	title = "andalucia_pide_union"
-	desc = andalucia.1.d
-	picture = GFX_report_event_ronda_1918
+	title = andalucia_pide_union
+	desc = andalucia.2.d
+	#picture = GFX_report_event_ronda_1918
 	
 	# is_triggered_only = yes
 	
@@ -54,5 +54,78 @@ country_event = {		# Los efectos para añadir se miran en commands (en la wiki)
 		name = "andalucia.2.o2"
 		ai_chance = { factor = 0 }
 		
+	}
+}
+
+
+ ### NEGOCIACION CON LOS ALIADOS ###
+country_event = {	# Andalucia negocia la entrada a los aliados
+	id = andalucia.3
+	title = andalucia_event_3
+	desc = andalucia.3.d
+	#picture = GFX_report_event_ronda_1918
+	
+	# is_triggered_only = yes
+	
+	trigger = {
+		original_tag = AND
+	}
+	
+	fire_only_once = yes
+	
+	option = {	#Pides gibraltar
+		name = "andalucia.3.o1"
+		ENG = { id = andalucia.4 hours = 2 }
+		ai_chance = { factor = 100 }
+	}
+	option = { #Pides unirte sinmas
+		name = "andalucia.3.o2"
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {	# Uk recibe este evento: and pide gibraltar
+	id = andalucia.4
+	title = andalucia_event_4
+	desc = andalucia.4.d
+	#picture = GFX_report_event_ronda_1918
+	
+	
+	trigger = {
+		original_tag = AND
+	}
+	
+	fire_only_once = yes
+	
+	option = {	#Pides gibraltar
+		name = "andalucia.4.o1"
+		AND = { id = andalucia.5 hours = 2  }
+		ai_chance = { factor = 100 }
+	}
+	option = { #Pides unirte sinmas
+		name = "andalucia.4.o2"
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {	# AND recibe respuesta : end cede gibraltar
+	id = andalucia.5
+	title = andalucia_event_5
+	desc = andalucia.5.d
+	#picture = GFX_report_event_ronda_1918
+	
+	
+	trigger = {
+		original_tag = ENG
+	}
+	
+	fire_only_once = yes
+	
+	option = {	#Pides gibraltar
+		name = "andalucia.5.o1"
+		ENG = { add_to_faction = AND }
+		set_state_owner = 118
+		
+		ai_chance = { factor = 100 }
 	}
 }
