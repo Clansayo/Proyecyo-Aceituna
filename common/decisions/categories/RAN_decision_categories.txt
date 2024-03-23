@@ -1,0 +1,31 @@
+#####################
+##### RANalucia #####
+#####################
+
+
+RAN_conflictos_jornaleros = {
+	priority = 9
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		original_tag = RAN
+	}
+}
+
+RAN_balance_of_power_category = {
+	icon = GFX_decision_category_power_struggle
+	
+	allowed = {
+		original_tag = RAN
+	}
+	
+	priority = 90
+	
+	visible = {
+		
+	}
+}

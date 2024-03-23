@@ -2044,9 +2044,7 @@
 		prerequisite = { focus = AND_acercarse_a_las_democracias focus = AND_discursos_democraticos  }
 		
 		completion_reward = {
-			ENG = {
-				country_event = { id = generic.2 hours = 4 }
-			}
+			country_event = { id = andalucia.3 hours = 4 }
 		}
 		 
 		ai_will_do = {
