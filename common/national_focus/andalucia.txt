@@ -226,7 +226,10 @@
 		y = 1
 		
 		available = {
-			
+		}
+		 
+		bypass= {
+			NOT = { has_idea = AND_protestas_jornaleros }
 		}
 		
 		prerequisite = { focus = AND_subsidios_agricultores }
@@ -2039,6 +2042,7 @@
 		
 		
 		available = {
+			ENG = { is_faction_leader = yes }
 		}
 		
 		prerequisite = { focus = AND_acercarse_a_las_democracias focus = AND_discursos_democraticos  }
@@ -2143,7 +2147,7 @@
 	
 	focus = {
 		id = AND_buscar_apoyos_mineros
-		icon = GFX_focus_generic_workers
+		icon = GFX_and_coal_mining
 		cost = 5
 		relative_position_id = AND_expropiar_latifundios
 		x = -4

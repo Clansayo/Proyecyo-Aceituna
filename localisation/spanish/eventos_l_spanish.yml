@@ -10,8 +10,36 @@
  andalucia.2.o1:0 "Bienvenidos de nuevo a España"
  andalucia.2.o2:0 "Este no es el camino"
  
- #Andalucia negcia entrar a los aliados:
- andalucia_event_3:0 "Negociar unirse a los aliados."
- andalucia.3.d:0 "Debemos entrar a los aliados para proteger la democracia del mundo. No obstante, este movimiento supondrá un gran riesgo para los andaluces. ¿Debemos pedir algo a cambio?"
- andalucia.3.o1:0 "Exigir Gibraltar"
- andalucia.3.o2:0 "No podemos arriesgarnos"
+ 
+ ### Andalucia negcia entrar a los aliados: ###
+ andalucia_event_3:0 "Negociar unirse a los [ENG.GetFactionName]"
+ andalucia.3.d:0 "Debemos entrar a los [ENG.GetFactionName] para proteger la democracia del mundo. No obstante, este movimiento supondrá un gran riesgo para los andaluces. ¿Debemos pedir algo a cambio?"
+ andalucia.3.o1:0 "Exigir Gibraltar."
+ andalucia.3.o2:0 "No podemos arriesgarnos."
+ 
+ andalucia_event_4:0 "[AND.GetNameDef] pide unirse a los [ENG.GetFactionName] a cambio de Gibraltar"
+ andalucia.4.d:0 "\n[AND.GetNameDef] inicia unas negociaciones con nosotros sobre su unión a los aliados. Esta alianza podría resultar de gran importancia estratégica para asegurar nuestro control sobre el mediterraneo, aunque el precio a pagar sea confiarles Gibraltar a los andaluces."
+ andalucia.4.o1:0 "Aceptar el trato. Gibraltar está mejor en sus manos"
+ andalucia.4.o2:0 "No podemos aceptar ese precio, no os necesitamos"
+ 
+ andalucia_event_5:0 "[ENG.GetNameDef] acepta nuestras peticiones"
+ andalucia.5.d:0 "¡A fecha de ([GetDateText]), Gibraltar deja de pertenecer a un dominio extra peninsular!. [AND.GetNameDef] se une a los [ENG.GetFactionName] a cambio del control sobre Gibraltar. Esta alianza significará un antes y un después en la historia de la península ibérica, garantizando la soberanía del reciente Estado Andaluz."
+ andalucia.5.o1:0 "Hoy es un gran dia para los andaluces"
+ 
+ andalucia_event_6:0 "[ENG.GetNameDef] rechaza nuestras peticiones"
+ andalucia.6.d:0 "[ENG.GetNameDef] no considera ceder Gibraltar como una opción posible ni considera Andalucía como posible aliado, rechazando una alianza Anglo-Andaluza. Andalucía deberá buscar otros aliados que tengan un mayor sentido común..."
+ andalucia.6.o1:0 "Ellos se lo pierden"
+ 
+ andalucia_event_7:0 "[AND.GetNameDef] pide unirse a los [ENG.GetFactionName]"
+ andalucia.7.d:0 "[AND.GetNameDef] inicia unas negociaciones con nosotros sobre su unión a los aliados. Esta alianza podría resultar de gran importancia estratégica para asegurar nuestro control sobre el mediterraneo y podría ser clave para el futuro de nuestra nación y europa."
+ andalucia.7.o1:0 "Aceptamos a los andaluces"
+ andalucia.7.o2:0 "Tenemos otros planes"
+ 
+ andalucia_event_8:0 "[ENG.GetNameDef] acepta nuestras peticiones"
+ andalucia.8.d:0 "[ENG.GetNameDef] acepta una alianza con nosotros. Este es un gran paso para Andalucía, para garantizar su soberanía y aumentar su reconocimiento internacional. Pese a ser un movimiento arriesgado, esto puede ser lo que la recien creada [AND.GetName] necesita."
+ andalucia.8.o1:0 "¿Y ahora que?"
+ 
+ andalucia_event_9:0 "[ENG.GetNameDef] rechaza nuestras peticiones"
+ andalucia.9.d:0 "[ENG.GetNameDef] no considera suficientemente valiosa una alianza con nosotros. Una vez mas vemos un claro ejemplo de incompetencia por parte de la nación británica..."
+ andalucia.9.o1:0 "Este rechazo será recordado"
+ 

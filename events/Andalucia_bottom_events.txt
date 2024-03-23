@@ -63,7 +63,7 @@ country_event = {	# Andalucia negocia la entrada a los aliados
 	id = andalucia.3
 	title = andalucia_event_3
 	desc = andalucia.3.d
-	#picture = GFX_report_event_ronda_1918
+	picture = GFX_report_event_and_gibraltar
 	
 	is_triggered_only = yes
 	
@@ -80,6 +80,7 @@ country_event = {	# Andalucia negocia la entrada a los aliados
 	}
 	option = { #Pides unirte sinmas
 		name = "andalucia.3.o2"
+		ENG = { country_event = { id = andalucia.7 hours = 15 } }
 		ai_chance = { factor = 0 }
 	}
 }
@@ -88,7 +89,7 @@ country_event = {	# Uk recibe este evento: and pide gibraltar
 	id = andalucia.4
 	title = andalucia_event_4
 	desc = andalucia.4.d
-	#picture = GFX_report_event_ronda_1918
+	picture = GFX_report_event_and_gibraltar
 	
 	is_triggered_only = yes
 	
@@ -129,11 +130,11 @@ country_event = {	# Uk recibe este evento: and pide gibraltar
 	}
 }
 
-country_event = {	# AND recibe respuesta : end cede gibraltar
+country_event = {	# AND recibe respuesta : eng cede gibraltar
 	id = andalucia.5
 	title = andalucia_event_5
 	desc = andalucia.5.d
-	#picture = GFX_report_event_ronda_1918
+	picture = GFX_report_event_generic_read_write
 	
 	is_triggered_only = yes
 	
@@ -156,7 +157,7 @@ country_event = {	# AND recibe respuesta : eng niega gibraltar
 	id = andalucia.6
 	title = andalucia_event_6
 	desc = andalucia.6.d
-	#picture = GFX_report_event_ronda_1918
+	picture = GFX_report_event_generic_read_write
 	
 	is_triggered_only = yes
 	
@@ -168,6 +169,74 @@ country_event = {	# AND recibe respuesta : eng niega gibraltar
 	
 	option = {	# Recibes gibraltar
 		name = "andalucia.6.o1"
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {	# AND pide unirse a los aliados
+	id = andalucia.7
+	title = andalucia_event_7
+	desc = andalucia.7.d
+	picture = GFX_report_event_and_UK_country_parliament
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = ENG
+	}
+	
+	fire_only_once = yes
+	
+	option = {	# Andalucia se une a los aliados
+		name = "andalucia.7.o1"
+		AND = { country_event = { id = andalucia.8 hours = 15 } }
+		ai_chance = { factor = 100 }
+	}
+	option = {	# Rechazar a los andaluces
+		name = "andalucia.7.o2"
+		AND = { country_event = { id = andalucia.9 hours = 15 } }
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {	# AND recibe respuesta : Eng acepta la alianza
+	id = andalucia.8
+	title = andalucia_event_8
+	desc = andalucia.8.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = AND
+	}
+	
+	fire_only_once = yes
+	
+	option = {	# Entras a los aliados
+		name = "andalucia.8.o1"
+		ENG = { add_to_faction = AND }
+		add_political_power = 100
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {	# AND recibe respuesta : Eng rechaza la alianza
+	id = andalucia.9
+	title = andalucia_event_9
+	desc = andalucia.9.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = AND
+	}
+	
+	fire_only_once = yes
+	
+	option = {	# Recibes gibraltar
+		name = "andalucia.9.o1"
 		ai_chance = { factor = 100 }
 	}
 }

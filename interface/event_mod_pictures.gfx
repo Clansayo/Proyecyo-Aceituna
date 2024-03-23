@@ -4,5 +4,15 @@ spriteTypes = {
 		name = "GFX_report_event_ronda_1918"
 		texturefile = "gfx/event_pictures/report_event_AND_ronda_1918.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_report_event_and_gibraltar"
+		texturefile = "gfx/event_pictures/report_event_and_gibraltar.dds"
+	}
 
+
+	spriteType = {
+		name = "GFX_report_event_and_UK_country_parliament"
+		texturefile = "gfx/event_pictures/kaiserreich/UK_country_parliament.png"
+	}
 }

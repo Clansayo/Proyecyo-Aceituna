@@ -82,4 +82,11 @@ spriteTypes = {
 	name = "GFX_and_iberia"
 	texturefile = "gfx/interface/goals/iberia.dds"			
 	}
+	
+	SpriteType = {
+	name = "GFX_and_coal_mining"
+	texturefile = "gfx/interface/goals/millennium_dawn/coal_mining.dds"			
+	}
+	
+	
 }
