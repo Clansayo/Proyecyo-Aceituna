@@ -9,7 +9,25 @@ AND_balance_of_power_category = {
 			is_debug = yes
 		}
 		complete_effect = {
-			
+			add_power_balance_value = {
+				id = AND_centralization_bop
+				value = +0.35
+				tooltip_side = left_side_unionistas
+			}
+		}
+	}
+	
+	DEBUG_prueba_2 = {
+		priority = 4
+		visible = {
+			is_debug = yes
+		}
+		complete_effect = {
+			add_power_balance_value = {
+				id = AND_centralization_bop
+				value = -0.4
+				tooltip_side = left_side_unionistas
+			}
 		}
 	}
 }

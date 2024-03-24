@@ -253,6 +253,64 @@ ideas = {
 			}
 		}
 		
+		AND_albores_de_la_revolucion = {
+			picture = asdasd
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {}
+			
+			cancel = {}
+			
+			
+			modifier = {
+				communism_drift  = 0.01
+				political_power_gain = 0.2
+			}
+		}
+		
+		AND_economia_socialista = {
+			picture = asdasd
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {}
+			
+			cancel = {}
+			
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.03
+				local_resources_factor = 0.2
+				equipment_conversion_speed = 0.1
+			}
+		}
+		
+		AND_economia_socialista_2 = {
+			picture = asdasd
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {}
+			
+			cancel = {}
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.03
+				local_resources_factor = 0.2
+				equipment_conversion_speed = 0.2
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
 		
 	}
 }

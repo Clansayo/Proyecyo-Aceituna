@@ -24,7 +24,7 @@ AND_centralization_bop = {
         icon = GFX_idea_generic_agrarian_society
 			
 		range = {
-            id = tendencia_independentista
+            id = and_tendencia_independentista
             min = -0.5
 			max = -0.25
             modifier = {
