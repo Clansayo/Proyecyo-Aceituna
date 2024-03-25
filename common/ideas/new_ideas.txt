@@ -311,6 +311,76 @@ ideas = {
 			}
 		}
 		
+		AND_obreros_andaluces = {
+			picture = asdasd
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {}
+			
+			cancel = {}
+			
+			modifier = {
+				recruitable_population = 0.05
+			}
+		}
+		
+		AND_obreros_andaluces_2 = {
+			picture = asdasd
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {}
+			
+			cancel = {}
+			
+			modifier = {
+				recruitable_population = 0.1
+				non_core_manpower = 0.05
+			}
+		}
+		
+		AND_fijarse_en_los_sovieticos = {
+			picture = asdasd
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {}
+			
+			cancel = {}
+			
+			modifier = {
+				mobilization_speed = 0.05
+				training_time_factor = -0.1
+				winter_attrition_factor = -0.1
+				acclimatization_cold_climate_gain_factor = 0.15
+				terrain_penalty_reduction = 0.05
+				land_doctrine_cost_factor = -0.1
+			}
+		}
+		
+		AND_bienes_eclesiasticos = {
+			picture = asdasd
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {}
+			
+			cancel = {}
+			
+			modifier = {
+				consumer_goods_factor = -0.3
+			}
+		}
+		
 		
 	}
 }

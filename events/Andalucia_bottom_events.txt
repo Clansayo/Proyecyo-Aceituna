@@ -240,3 +240,28 @@ country_event = {	# AND recibe respuesta : Eng rechaza la alianza
 		ai_chance = { factor = 100 }
 	}
 }
+
+country_event = {	# AND recibe respuesta : Eng rechaza la alianza
+	id = andalucia.10
+	title = "Andalucia se vuelve comunista"
+	desc = andalucia.10.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = AND
+	}
+	
+	fire_only_once = yes
+	
+	option = {	# Recibes gibraltar
+		name = "andalucia.9.o1"
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+		add_stability = -0.05
+		ai_chance = { factor = 100 }
+	}
+}

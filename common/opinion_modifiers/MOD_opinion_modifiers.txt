@@ -13,4 +13,5 @@ opinion_modifiers = {
 	
 	AND_andalucia_se_acerca_democracias = { value = 50 }
 	AND_andalucia_condena_fascismo_español = { value = -50 }
+	AND_andalucia_se_acerca_a_la_urss = { value = 100 }
 }
