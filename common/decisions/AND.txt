@@ -32,6 +32,343 @@ AND_balance_of_power_category = {
 	}
 }
 
+AND_integrar_territorios = { 
+	AND_integrar_madrid = { 
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 41 }
+		}
+		
+		
+		icon = asdasddasICON
+		
+		allowed = { tag = AND }
+		cost = 60
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 41
+		}
+		
+		complete_effect = {
+			add_state_core = 41
+		}
+		
+	}
+	
+	AND_integrar_extremadura = { 
+		allowed = { tag = AND }
+		cost = 50
+		icon = asdasddasICON
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 170 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 170
+		}
+		
+		complete_effect = {
+			add_state_core = 170
+		}
+	}
+	
+	AND_integrar_la_mancha = { 
+		allowed = { tag = AND }
+		cost = 30
+		icon = asdasddasICON
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 175 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 175
+		}
+		
+		complete_effect = {
+			add_state_core = 175
+		}
+	}
+	
+	AND_integrar_murcia = { 
+		allowed = { tag = AND }
+		cost = 35
+		icon = asdasddasICON
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 168 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 168
+		}
+		
+		complete_effect = {
+			add_state_core = 168
+		}
+	}
+	
+	AND_integrar_valencia = { 
+		allowed = { tag = AND }
+		cost = 50
+		icon = asdasddasICON
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 167 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 167
+		}
+		
+		complete_effect = {
+			add_state_core = 167
+		}
+	}
+	
+	AND_integrar_guadalajara = { 
+		allowed = { tag = AND }
+		cost = 50
+		icon = asdasddasICON
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 793 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 793
+		}
+		
+		complete_effect = {
+			add_state_core = 793
+		}
+	}
+	
+	AND_integrar_salamanca = { 
+		allowed = { tag = AND }
+		cost = 30
+		icon = asdasddasICON
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 788 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 788
+		}
+		
+		complete_effect = {
+			add_state_core = 788
+		}
+	}
+	
+	AND_integrar_leon = { 
+		allowed = { tag = AND }
+		cost = 30
+		icon = asdasddasICON
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 174 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 174
+		}
+		
+		complete_effect = {
+			add_state_core = 174
+		}
+	}
+	
+	AND_integrar_valladolid = { 
+		allowed = { tag = AND }
+		cost = 30
+		icon = asdasddasICON
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 791 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 791
+		}
+		
+		complete_effect = {
+			add_state_core = 791
+		}
+	}
+	
+	AND_integrar_burgos = { 
+		allowed = { tag = AND }
+		cost = 30
+		icon = asdasddasICON
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 176 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 176
+		}
+		
+		complete_effect = {
+			add_state_core = 176
+		}
+	}
+	
+	AND_integrar_aragon = { 
+		allowed = { tag = AND }
+		cost = 30
+		icon = asdasddasICON
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 166 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 166
+		}
+		
+		complete_effect = {
+			add_state_core = 166
+		}
+	}
+	
+	AND_integrar_aragon_oriental = { 
+		allowed = { tag = AND }
+		cost = 30
+		icon = asdasddasICON
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 794 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 794
+		}
+		
+		complete_effect = {
+			add_state_core = 794
+		}
+	}
+	
+	AND_integrar_asturias = { 
+		allowed = { tag = AND }
+		cost = 30
+		icon = asdasddasICON
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 790 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 790
+		}
+		
+		complete_effect = {
+			add_state_core = 790
+		}
+	}
+	
+	AND_integrar_baleares = { 
+		allowed = { tag = AND }
+		cost = 30
+		icon = asdasddasICON
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 177 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 177
+		}
+		
+		complete_effect = {
+			add_state_core = 177
+		}
+	}
+	
+	AND_integrar_canarias = { 
+		allowed = { tag = AND }
+		cost = 30
+		icon = asdasddasICON
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 178 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 178
+		}
+		
+		complete_effect = {
+			add_state_core = 178
+		}
+	}
+	
+}
+
 AND_conflictos_jornaleros = {
 
 	AND_revolucion_jornalera = { 

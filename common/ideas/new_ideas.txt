@@ -381,6 +381,45 @@ ideas = {
 			}
 		}
 		
+		AND_el_camino_andaluz = {
+			picture = asdasd
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {}
+			
+			cancel = {}
+			
+			modifier = {
+				command_power_gain = 0.5
+				experience_gain_army = 0.1
+				max_command_power_mult = 0.3
+				army_attack_against_major_factor = 0.2
+				army_core_attack_factor = 0.2
+				army_breakthrough_against_major_factor = 0.2
+				army_speed_factor = 0.1
+				army_org_regain = 0.1
+			}
+		}
+		
+		AND_trabajadores_de_iberia = {
+			picture = asdasd
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {}
+			
+			cancel = {}
+			
+			modifier = {
+				communism_drift  = 0.1
+			}
+		}
+		
 		
 	}
 }
