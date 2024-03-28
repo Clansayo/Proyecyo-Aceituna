@@ -40,8 +40,7 @@ AND_integrar_territorios = {
 			highlight_state_targets = { state = 41 }
 		}
 		
-		
-		icon = asdasddasICON
+		icon = GFX_decision_category_spr_reassert_american_dominance
 		
 		allowed = { tag = AND }
 		cost = 60
@@ -53,7 +52,8 @@ AND_integrar_territorios = {
 			controls_state = 41
 		}
 		
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_state_core = 41
 		}
 		
@@ -62,7 +62,9 @@ AND_integrar_territorios = {
 	AND_integrar_extremadura = { 
 		allowed = { tag = AND }
 		cost = 50
-		icon = asdasddasICON
+		icon = GFX_decision_category_spr_reassert_american_dominance
+		
+
 		
 		on_map_mode = map_and_decisions_view
 		highlight_states = {
@@ -76,7 +78,8 @@ AND_integrar_territorios = {
 			controls_state = 170
 		}
 		
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_state_core = 170
 		}
 	}
@@ -84,12 +87,12 @@ AND_integrar_territorios = {
 	AND_integrar_la_mancha = { 
 		allowed = { tag = AND }
 		cost = 30
-		icon = asdasddasICON
+		icon = GFX_decision_category_spr_reassert_american_dominance
 		
 		on_map_mode = map_and_decisions_view
 		highlight_states = {
 			highlight_state_targets = { state = 175 }
-		}
+		} 
 		
 		is_good = yes
 		fire_only_once = yes
@@ -98,7 +101,8 @@ AND_integrar_territorios = {
 			controls_state = 175
 		}
 		
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_state_core = 175
 		}
 	}
@@ -106,7 +110,7 @@ AND_integrar_territorios = {
 	AND_integrar_murcia = { 
 		allowed = { tag = AND }
 		cost = 35
-		icon = asdasddasICON
+		icon = GFX_decision_category_spr_reassert_american_dominance
 		
 		on_map_mode = map_and_decisions_view
 		highlight_states = {
@@ -120,7 +124,8 @@ AND_integrar_territorios = {
 			controls_state = 168
 		}
 		
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_state_core = 168
 		}
 	}
@@ -128,7 +133,7 @@ AND_integrar_territorios = {
 	AND_integrar_valencia = { 
 		allowed = { tag = AND }
 		cost = 50
-		icon = asdasddasICON
+		icon = GFX_decision_category_spr_reassert_american_dominance
 		
 		on_map_mode = map_and_decisions_view
 		highlight_states = {
@@ -142,7 +147,8 @@ AND_integrar_territorios = {
 			controls_state = 167
 		}
 		
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_state_core = 167
 		}
 	}
@@ -150,7 +156,7 @@ AND_integrar_territorios = {
 	AND_integrar_guadalajara = { 
 		allowed = { tag = AND }
 		cost = 50
-		icon = asdasddasICON
+		icon = GFX_decision_category_spr_reassert_american_dominance
 		
 		on_map_mode = map_and_decisions_view
 		highlight_states = {
@@ -164,7 +170,8 @@ AND_integrar_territorios = {
 			controls_state = 793
 		}
 		
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_state_core = 793
 		}
 	}
@@ -172,7 +179,7 @@ AND_integrar_territorios = {
 	AND_integrar_salamanca = { 
 		allowed = { tag = AND }
 		cost = 30
-		icon = asdasddasICON
+		icon = GFX_decision_category_spr_reassert_american_dominance
 		
 		on_map_mode = map_and_decisions_view
 		highlight_states = {
@@ -186,7 +193,8 @@ AND_integrar_territorios = {
 			controls_state = 788
 		}
 		
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_state_core = 788
 		}
 	}
@@ -194,7 +202,7 @@ AND_integrar_territorios = {
 	AND_integrar_leon = { 
 		allowed = { tag = AND }
 		cost = 30
-		icon = asdasddasICON
+		icon = GFX_decision_category_spr_reassert_american_dominance
 		
 		on_map_mode = map_and_decisions_view
 		highlight_states = {
@@ -208,7 +216,8 @@ AND_integrar_territorios = {
 			controls_state = 174
 		}
 		
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_state_core = 174
 		}
 	}
@@ -216,7 +225,7 @@ AND_integrar_territorios = {
 	AND_integrar_valladolid = { 
 		allowed = { tag = AND }
 		cost = 30
-		icon = asdasddasICON
+		icon = GFX_decision_category_spr_reassert_american_dominance
 		
 		on_map_mode = map_and_decisions_view
 		highlight_states = {
@@ -230,7 +239,8 @@ AND_integrar_territorios = {
 			controls_state = 791
 		}
 		
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_state_core = 791
 		}
 	}
@@ -238,7 +248,7 @@ AND_integrar_territorios = {
 	AND_integrar_burgos = { 
 		allowed = { tag = AND }
 		cost = 30
-		icon = asdasddasICON
+		icon = GFX_decision_category_spr_reassert_american_dominance
 		
 		on_map_mode = map_and_decisions_view
 		highlight_states = {
@@ -252,7 +262,8 @@ AND_integrar_territorios = {
 			controls_state = 176
 		}
 		
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_state_core = 176
 		}
 	}
@@ -260,7 +271,7 @@ AND_integrar_territorios = {
 	AND_integrar_aragon = { 
 		allowed = { tag = AND }
 		cost = 30
-		icon = asdasddasICON
+		icon = GFX_decision_category_spr_reassert_american_dominance
 		
 		on_map_mode = map_and_decisions_view
 		highlight_states = {
@@ -274,7 +285,8 @@ AND_integrar_territorios = {
 			controls_state = 166
 		}
 		
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_state_core = 166
 		}
 	}
@@ -282,7 +294,7 @@ AND_integrar_territorios = {
 	AND_integrar_aragon_oriental = { 
 		allowed = { tag = AND }
 		cost = 30
-		icon = asdasddasICON
+		icon = GFX_decision_category_spr_reassert_american_dominance
 		
 		on_map_mode = map_and_decisions_view
 		highlight_states = {
@@ -296,7 +308,8 @@ AND_integrar_territorios = {
 			controls_state = 794
 		}
 		
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_state_core = 794
 		}
 	}
@@ -304,7 +317,7 @@ AND_integrar_territorios = {
 	AND_integrar_asturias = { 
 		allowed = { tag = AND }
 		cost = 30
-		icon = asdasddasICON
+		icon = GFX_decision_category_spr_reassert_american_dominance
 		
 		on_map_mode = map_and_decisions_view
 		highlight_states = {
@@ -318,7 +331,8 @@ AND_integrar_territorios = {
 			controls_state = 790
 		}
 		
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_state_core = 790
 		}
 	}
@@ -326,7 +340,7 @@ AND_integrar_territorios = {
 	AND_integrar_baleares = { 
 		allowed = { tag = AND }
 		cost = 30
-		icon = asdasddasICON
+		icon = GFX_decision_category_spr_reassert_american_dominance
 		
 		on_map_mode = map_and_decisions_view
 		highlight_states = {
@@ -340,7 +354,8 @@ AND_integrar_territorios = {
 			controls_state = 177
 		}
 		
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_state_core = 177
 		}
 	}
@@ -348,7 +363,7 @@ AND_integrar_territorios = {
 	AND_integrar_canarias = { 
 		allowed = { tag = AND }
 		cost = 30
-		icon = asdasddasICON
+		icon = GFX_decision_category_spr_reassert_american_dominance
 		
 		on_map_mode = map_and_decisions_view
 		highlight_states = {
@@ -362,8 +377,216 @@ AND_integrar_territorios = {
 			controls_state = 178
 		}
 		
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			add_state_core = 178
+		}
+	}
+	
+	AND_integrar_beja = { 
+		allowed = { tag = AND }
+		cost = 50
+		icon = GFX_decision_portugal_flag
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 179 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 179
+		}
+		
+		days_remove = 30
+		remove_effect = {
+			add_state_core = 179
+		}
+	}
+	
+	AND_integrar_santarem = { 
+		allowed = { tag = AND }
+		cost = 25
+		icon = GFX_decision_portugal_flag
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 795 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 795
+		}
+		
+		days_remove = 30
+		remove_effect = {
+			add_state_core = 795
+		}
+	}
+	
+	AND_integrar_lisboa = { 
+		allowed = { tag = AND }
+		cost = 50
+		icon = GFX_decision_portugal_flag
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 112 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 112
+		}
+		
+		days_remove = 30
+		remove_effect = {
+			add_state_core = 112
+		}
+	}
+	
+	AND_integrar_guarda = { 
+		allowed = { tag = AND }
+		cost = 25
+		icon = GFX_decision_portugal_flag
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 181 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 181
+		}
+		
+		days_remove = 30
+		remove_effect = {
+			add_state_core = 181
+		}
+	}
+	
+	AND_integrar_oporto = { 
+		allowed = { tag = AND }
+		cost = 50
+		icon = GFX_decision_portugal_flag
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 180 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 180
+		}
+		
+		days_remove = 30
+		remove_effect = {
+			add_state_core = 180
+		}
+	}
+	
+	AND_integrar_galicia = { 
+		allowed = { tag = AND }
+		cost = 50
+		icon = GFX_decision_galicia_flag
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 171 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 171
+		}
+		
+		days_remove = 30
+		remove_effect = {
+			add_state_core = 171
+		}
+	}
+	
+	AND_integrar_pais_vasco = { 
+		allowed = { tag = AND }
+		cost = 40
+		icon = GFX_decision_basque_flag
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 792 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 792
+		}
+		
+		days_remove = 30
+		remove_effect = {
+			add_state_core = 792
+		}
+	}
+	
+	AND_integrar_navarra = { 
+		allowed = { tag = AND }
+		cost = 40
+		icon = GFX_decision_basque_flag
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 172 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 172
+		}
+		
+		days_remove = 30
+		remove_effect = {
+			add_state_core = 172
+		}
+	}
+	
+	AND_integrar_cataluña = { 
+		allowed = { tag = AND }
+		cost = 60
+		icon = GFX_decision_catalan_flag
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 165 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 165
+		}
+		
+		days_remove = 30
+		remove_effect = {
+			add_state_core = 165
 		}
 	}
 	
