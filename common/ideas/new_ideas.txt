@@ -419,6 +419,30 @@ ideas = {
 				communism_drift  = 0.1
 			}
 		}
+
+		AND_idea_extender_la_revolucion = {
+			picture = asdasd
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {}
+			
+			cancel = {}
+			
+			modifier = {
+				#compliance_growth_on_our_occupied_states = 0.3
+				required_garrison_factor = -0.3
+				resistance_activity = -0.3
+				resistance_target = -0.1
+				#resistance_damage_to_garrison_on_our_occupied_states = 0.4
+				#resistance_decay_on_our_occupied_states = 0.1
+				army_breakthrough_against_major_factor = 0.3
+				army_speed_factor = 0.1
+				army_morale_factor = 0.2
+			}
+		}
 		
 		
 	}

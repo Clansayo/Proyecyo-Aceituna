@@ -43,3 +43,9 @@
  andalucia.9.d:0 "[ENG.GetNameDef] no considera suficientemente valiosa una alianza con nosotros. Una vez mas vemos un claro ejemplo de incompetencia por parte de la nación británica..."
  andalucia.9.o1:0 "Este rechazo será recordado"
  
+ ###  Andalucia se vuevle comunista ###
+ andalucia_event_10:0 "El pueblo andaluz abraza el comunismo"
+ andalucia.10.d:0 "Tras intensas disputas internas sobre el destino de la recien nacido estado andaluz, los distintos partidos que forman el gobierno provisional han decidido darle el gobierno al Partido Comunista Andaluz, una escisión del PCE"
+ andalucia.10.o1:0 "El PCE obtiene el gobierno"
+
+ 

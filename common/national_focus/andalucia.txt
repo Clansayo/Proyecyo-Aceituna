@@ -2521,7 +2521,7 @@
 		completion_reward = {
 			add_timed_idea { 
 				idea = AND_lucha_contra_el_fascismo 
-				days = 365
+				days = 800
 			}
 			every_other_country = {
 				limit = {
@@ -2567,11 +2567,36 @@
 		prerequisite = { focus = AND_trabajadores_de_iberia_unios }
 		
 		completion_reward = {
-			SPR = { country_event = generic.5 }
-			CAT = { country_event = generic.5 }
-			POR = { country_event = generic.5 }
-			NAV = { country_event = generic.5 }
-			POR = { country_event = generic.5 }
+			if = {
+				limit = {
+					CAT = { NOT = { has_government = fascism } }
+				}
+				CAT = { country_event = generic.5 }
+			}
+			if = {
+				limit = {
+					SPR = { NOT = { has_government = fascism } }
+				}
+				SPR = { country_event = generic.5 }
+			}
+			if = {
+				limit = {
+					POR = { NOT = { has_government = fascism } }
+				}
+				POR = { country_event = generic.5 }
+			}
+			if = {
+				limit = {
+					NAV = { NOT = { has_government = fascism } }
+				}
+				NAV = { country_event = generic.5 }
+			}
+			if = {
+				limit = {
+					GLC = { NOT = { has_government = fascism } }
+				}
+				GLC = { country_event = generic.5 }
+			}
 		}
 		
 		ai_will_do = {
@@ -2815,7 +2840,7 @@
 			}
 			if = {
 				limit = {
-					SPR = { is_in_faction_with = AND }
+						SPR = { is_in_faction_with = AND }
 				}
 				SPR = { country_event = { id = andalucia.11 hours = 6 } } 
 			}
@@ -2854,6 +2879,42 @@
 		icon = GFX_focus_SOV_socialism_in_one_country
 		cost = 5
 		relative_position_id = AND_unificar_las_republicas
+		x = 2
+		y = 1
+		
+		available = {
+		}
+		
+		prerequisite = { focus = AND_unificar_las_republicas }
+		
+		completion_reward = {
+			SOV = { country_event = { id = andalucia.13 hours = 6 } }
+			add_opinion_modifier = {
+				target = SOV
+				modifier = AND_andalucia_se_acerca_a_la_urss
+			}
+			SOV = { 
+				add_opinion_modifier = {
+					target = AND
+					modifier = AND_andalucia_se_acerca_a_la_urss
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+
+	focus = {
+		id = AND_asegurar_iberia
+		icon = GFX_and_nuestra_identidad
+		cost = 5
+		relative_position_id = AND_unificar_las_republicas
 		x = 0
 		y = 1
 		
@@ -2863,18 +2924,69 @@
 		prerequisite = { focus = AND_unificar_las_republicas }
 		
 		completion_reward = {
-			diplomatic_relation = { 
-				country = SOV 
-				relation = non_aggression_pact 
+			if = {
+				limit = {
+					AND = { 
+						country_exists = SPR
+						SPR = NOT = { { is_in_faction_with = AND } }
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = SPR
+					expire = 0
+				}
 			}
-			add_opinion_modifier = {
-				target = SOV
-				modifier = AND_andalucia_se_acerca_a_la_urss
+			if = {
+				limit = {
+					AND = { 
+						country_exists = CAT
+						CAT = NOT = { { is_in_faction_with = AND } }
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = CAT
+					expire = 0
+				}
 			}
-			SOV = { 
-				add_opinion_modifier = {
-					target = AND
-					modifier = AND_andalucia_se_acerca_a_la_urss
+			if = {
+				limit = {
+					AND = { 
+						country_exists = POR
+						POR = NOT = { { is_in_faction_with = AND } }
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = POR
+					expire = 0
+				}
+			}
+			if = {
+				limit = {
+					AND = { 
+						country_exists = GLC
+						GLC = NOT = { { is_in_faction_with = AND } }
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = GLC
+					expire = 0
+				}
+			}
+			if = {
+				limit = {
+					AND = { 
+						country_exists = NAV
+						NAV = NOT = { { is_in_faction_with = AND } }
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = NAV
+					expire = 0
 				}
 			}
 		}
@@ -2902,7 +3014,7 @@
 		prerequisite = { focus = AND_subyugar_iberia  focus = AND_unificar_las_republicas }
 		
 		completion_reward = {
-			
+			add_ideas = { AND_idea_extender_la_revolucion }
 		}
 		
 		ai_will_do = {
@@ -3045,7 +3157,7 @@
 	}
 	
 	focus = {
-		id = AND_invitar_a_la_union
+		id = AND_invitar_a_la_union_africanos
 		icon = GFX_focus_SWE_refuge_for_revolutionaries
 		cost = 5
 		relative_position_id = AND_guiar_territorios_africanos 

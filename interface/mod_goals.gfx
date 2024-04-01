@@ -88,5 +88,9 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/millennium_dawn/coal_mining.dds"			
 	}
 	
+	SpriteType = {
+	name = "GFX_and_nuestra_identidad"
+	texturefile = "gfx/interface/goals/millennium_dawn/SPR_nuestra_identidad.png"			
+	}
 	
 }

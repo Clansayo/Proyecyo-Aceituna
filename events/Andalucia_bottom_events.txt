@@ -243,11 +243,11 @@ country_event = {	# AND recibe respuesta : Eng rechaza la alianza
 #######		FIN NEGOCIACIONES	#######
 
 
-country_event = {	# AND recibe respuesta : Eng rechaza la alianza
+country_event = {	# Andalucia se vuelve comunista
 	id = andalucia.10
-	title = "Andalucia se vuelve comunista"
+	title = andalucia_event_10
 	desc = andalucia.10.d
-	picture = GFX_report_event_generic_read_write
+	picture = GFX_report_event_and_jose_diaz
 	
 	is_triggered_only = yes
 	
@@ -258,7 +258,7 @@ country_event = {	# AND recibe respuesta : Eng rechaza la alianza
 	fire_only_once = yes
 	
 	option = {
-		name = "andalucia..10.o1"
+		name = "andalucia.10.o1"
 		set_politics = {
 			ruling_party = communism
 			elections_allowed = no
@@ -268,6 +268,7 @@ country_event = {	# AND recibe respuesta : Eng rechaza la alianza
 	}
 }
 
+####	UNIFICACION COMUNISTA DE IBERIA ####
 country_event = {	# Preguntar a paises de la facion revolucionaria de iberia de unificarse
 	id = andalucia.11
 	title = andalucia_event_11
@@ -303,7 +304,7 @@ country_event = {	# Preguntar a paises de la facion revolucionaria de iberia de 
 
 country_event = {	#Respuesta de los ibéricos llega a AND
 	id = andalucia.12
-	title = andalucia_12
+	title = andalucia_event_12
 	desc = andalucia.12.d
 	#picture = GFX_report_event_ronda_1918
 	
@@ -324,5 +325,76 @@ country_event = {	#Respuesta de los ibéricos llega a AND
 		set_cosmetic_tag = AND_andalucia_unifica_comunismo_iberico
 		ai_chance = { factor = 100 }
 	}
+}
 
+####	PACTO DE NO AGRESION CON LA URSS	####
+country_event = {	#Andalucia pide pacto no agresion a la urss
+	id = andalucia.13
+	title = andalucia_event_13
+	desc = andalucia.13.d
+	#picture = GFX_report_event_ronda_1918
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = SOV
+	}
+	
+	fire_only_once = yes
+	
+	option = { 
+		name = "andalucia.13.o1"
+		AND = { country_event = { id = andalucia.14 hours = 6 } }
+		ai_chance = { factor = 90 }
+	}
+
+	option = { 
+		name = "andalucia.13.o2"
+		AND = { country_event = { id = andalucia.15 hours = 6 } }
+		ai_chance = { factor = 10 }
+	}
+}
+
+country_event = {	#La urss acepta el pacto de no agresión
+	id = andalucia.14
+	title = andalucia_event_14
+	desc = andalucia.14.d
+	#picture = GFX_report_event_ronda_1918
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = AND
+	}
+	
+	#fire_only_once = yes
+	
+	option = { 
+		name = "andalucia.14.o1"
+		diplomatic_relation = { 
+			country = SOV
+			relation = non_aggression_pact 
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {	#La urss rechaza el pacto de no agresión
+	id = andalucia.15
+	title = andalucia_event_15
+	desc = andalucia.15.d
+	#picture = GFX_report_event_ronda_1918
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = AND
+	}
+	
+	#fire_only_once = yes
+	
+	option = { 
+		name = "andalucia.15.o1"
+		ai_chance = { factor = 100 }
+	}
 }
