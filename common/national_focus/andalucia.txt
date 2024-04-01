@@ -2187,6 +2187,7 @@
 		prerequisite = { focus = AND_camino_andaluz }
 		
 		completion_reward = {
+			create_faction = "and_union_revolucionaria_iberica"
 			SPR = { 
 				add_timed_idea { 
 					idea = AND_trabajadores_de_iberia 
@@ -2566,7 +2567,11 @@
 		prerequisite = { focus = AND_trabajadores_de_iberia_unios }
 		
 		completion_reward = {
-			
+			SPR = { country_event = generic.5 }
+			CAT = { country_event = generic.5 }
+			POR = { country_event = generic.5 }
+			NAV = { country_event = generic.5 }
+			POR = { country_event = generic.5 }
 		}
 		
 		ai_will_do = {
@@ -2802,6 +2807,36 @@
 		prerequisite = { focus = AND_invitar_a_la_union }
 		
 		completion_reward = {
+			if = {
+				limit = {
+					CAT = { is_in_faction_with = AND }
+				}
+				CAT = { country_event = { id = andalucia.11 hours = 6 } } 
+			}
+			if = {
+				limit = {
+					SPR = { is_in_faction_with = AND }
+				}
+				SPR = { country_event = { id = andalucia.11 hours = 6 } } 
+			}
+			if = {
+				limit = {
+					POR = { is_in_faction_with = AND }
+				}
+				POR = { country_event = { id = andalucia.11 hours = 6 } } 
+			}
+			if = {
+				limit = {
+					NAV = { is_in_faction_with = AND }
+				}
+				NAV = { country_event = { id = andalucia.11 hours = 6 } } 
+			}
+			if = {
+				limit = {
+					GLC = { is_in_faction_with = AND }
+				}
+				GLC = { country_event = { id = andalucia.11 hours = 6 } } 
+			}
 			
 		}
 		
@@ -2828,7 +2863,20 @@
 		prerequisite = { focus = AND_unificar_las_republicas }
 		
 		completion_reward = {
-			
+			diplomatic_relation = { 
+				country = SOV 
+				relation = non_aggression_pact 
+			}
+			add_opinion_modifier = {
+				target = SOV
+				modifier = AND_andalucia_se_acerca_a_la_urss
+			}
+			SOV = { 
+				add_opinion_modifier = {
+					target = AND
+					modifier = AND_andalucia_se_acerca_a_la_urss
+				}
+			}
 		}
 		
 		ai_will_do = {

@@ -3,13 +3,13 @@
 #Modeados:
 
 RSE = { 
-	color = rgb { 57 85 104 }
-	color_ui = rgb { 57 85 104 }
+	color = rgb { 57 10 104 }
+	color_ui = rgb { 57 10 104 }
 }
 
 AND = {
-	color = rgb { 0 157 79 }
-	color_ui = rgb { 0 157 79 }
+	color = rgb { 117 217 132 }
+	color_ui = rgb { 117 217 132 }
 } 
 CAT = { 
 	color = rgb { 177 14 22 }

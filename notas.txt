@@ -1,3 +1,23 @@
+POR HACER:
+
+Igual habría que revisar los eventos las imagenes, los nombres de las cosas (localisation) y eso.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #Esto va en lar_on_actions.txt	pa eliminar un lider y eso
 #Clean up Primo de Rivera in case of already dead

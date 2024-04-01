@@ -25,7 +25,7 @@ AND_integrar_territorios = {
 	}
 
 	visible = {
-		original_tag = AND
+		OR = { original_tag = AND	original_tag = CAT	original_tag = GLC	original_tag = NAV }	
 	}
 }
 
