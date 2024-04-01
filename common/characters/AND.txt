@@ -93,6 +93,49 @@ characters={
 		}
 		
 	}
+
+
+	#######################
+	###### GENERALES ######
+	#######################
+
+	AND_juan_modesto={
+		name=SPR_juan_modesto
+		portraits={
+			army={
+				large="GFX_portrait_SPR_juan_modesto"
+				small=GFX_portrait_SPR_juan_modesto_small
+			}
+		}
+		corps_commander={
+			traits={ trait_mountaineer }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=1105
+		}
+	}
+
+	AND_valentin_gonzalez={
+		name=SPR_valentin_gonzalez
+		portraits={
+			army={
+				large="GFX_portrait_SPR_valentin_gonzalez"
+				small=GFX_portrait_SPR_valentin_gonzalez_small
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=1104
+		}
+	}
 	
 	
 	########################

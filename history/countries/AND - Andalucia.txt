@@ -13,6 +13,15 @@ recruit_character = AND_blas_i_de_andalucia
 recruit_character = AND_jose_diaz
 recruit_character = AND_jose_enrique_varela
 
+recruit_character = AND_juan_modesto	#Militar comunista gaditano
+recruit_character = AND_valentin_gonzalez	#vivió en córdoba xd
+
+# SPR_miguel_buiza_fernandez_palacios estaria bien reclutarlo en un focus de la armada barcos
+#SPR_valentin_gonzalez
+
+#Lina Ódena personaje muy importante en el 34 para cataluña
+
+
 
 set_politics = {
 	ruling_party = democratic
