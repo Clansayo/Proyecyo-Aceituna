@@ -12,6 +12,7 @@ recruit_character = AND_blas_infante
 recruit_character = AND_blas_i_de_andalucia
 recruit_character = AND_jose_diaz
 recruit_character = AND_jose_enrique_varela
+recruit_character = AND_javier_alejandro_borrego
 
 recruit_character = AND_juan_modesto	#Militar comunista gaditano
 recruit_character = AND_valentin_gonzalez	#vivió en córdoba xd

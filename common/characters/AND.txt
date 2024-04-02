@@ -136,6 +136,25 @@ characters={
 			legacy_id=1104
 		}
 	}
+
+	AND_javier_alejandro_borrego={
+		name=AND_alejandro_borrego
+		portraits={
+			army={
+				large="GFX_portrait_and_javier_alejandro_borrego"
+				small=GFX_portrait_and_javier_alejandro_borrego_small
+			}
+		}
+		field_marshal={
+			traits={ harsh_leader organizer logistics_wizard  }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=9950
+		}
+	}
 	
 	
 	########################

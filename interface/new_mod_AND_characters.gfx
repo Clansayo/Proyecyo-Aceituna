@@ -30,6 +30,11 @@ spriteTypes = {
 		name = "GFX_portrait_and_jose_diaz_small"
 		texturefile = "gfx/characters/portrait_jose_diaz_small.dds"
 	}
-	
+
+	####	GENERALES	####
+	spriteType = {
+		name = "GFX_portrait_and_javier_alejandro_borrego"
+		texturefile = "gfx/leaders/AND/portrait_alejandro_borrego.dds"
+	}
 
 }
