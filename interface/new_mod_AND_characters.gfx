@@ -25,7 +25,7 @@ spriteTypes = {
 		texturefile = "gfx/leaders/AND/portrait_mohamed_V.dds"
 	}
 	
-	#Sprite Advisor:
+	#Sprite Advisor (Small):
 	spriteType = {
 		name = "GFX_portrait_and_jose_diaz_small"
 		texturefile = "gfx/characters/portrait_jose_diaz_small.dds"
@@ -35,6 +35,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_portrait_and_javier_alejandro_borrego"
 		texturefile = "gfx/leaders/AND/portrait_alejandro_borrego.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_and_Valentin_Gutierrez"
+		texturefile = "gfx/leaders/AND/portrait_and_Valentin_Gutierrez.dds"
 	}
 
 }

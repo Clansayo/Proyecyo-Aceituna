@@ -155,6 +155,36 @@ characters={
 			legacy_id=9950
 		}
 	}
+
+	AND_valentin_gutierrez={
+		name=AND_valentin_gutierrez
+		portraits={
+			army={
+				large=GFX_portrait_and_Valentin_Gutierrez
+				small="GFX_idea_manstein"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = valentin_gutierrez
+			allowed = {
+				original_tag = AND
+			}
+			traits = {
+				communist_revolutionary 
+			}
+		}
+		
+		corps_commander={
+			traits={ brilliant_strategist armor_officer trickster trait_engineer }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=5
+		}
+	}
 	
 	
 	########################

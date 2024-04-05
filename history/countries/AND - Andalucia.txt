@@ -13,13 +13,31 @@ recruit_character = AND_blas_i_de_andalucia
 recruit_character = AND_jose_diaz
 recruit_character = AND_jose_enrique_varela
 recruit_character = AND_javier_alejandro_borrego
+recruit_character = AND_valentin_gutierrez
 
 recruit_character = AND_juan_modesto	#Militar comunista gaditano
 recruit_character = AND_valentin_gonzalez	#vivió en córdoba xd
 
-# SPR_miguel_buiza_fernandez_palacios estaria bien reclutarlo en un focus de la armada barcos
+####BUENOS CANDIDATOS A GENERALES:
+#Valentín Gutiérrez de Miguel periodista y despues general de brigada y division
+#Enrique Jurado Barrio # no es andaluz pero puede servir porque no se sabe apenas de él. General de brigada
+#Francisco Patxot de málaga
+#Manuel Márquez Sánchez-Movellan 	llegó a tener el mando de una división
 #SPR_valentin_gonzalez
 
+###Gente mas pequeña ####
+#Antonio Gómez de Salazar
+#Manuel Márquez Sánchez de Movellán
+#Juan Bernal Segura
+
+# SPR_miguel_buiza_fernandez_palacios estaria bien reclutarlo en un focus de la armada barcos
+
+#Miguel Cabanellas malagueño andaluz fascista
+# Juan Bernal Segura de murcia pero no llevaba ni brigadas
+
+
+
+# Francisco Ortega Jiménez de jaen
 #Lina Ódena personaje muy importante en el 34 para cataluña
 
 
