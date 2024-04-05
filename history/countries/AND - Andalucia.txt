@@ -8,15 +8,16 @@ add_ideas = {
 	AND_gobierno_nuevo
 }
 
+#Políticos
 recruit_character = AND_blas_infante
 recruit_character = AND_blas_i_de_andalucia
 recruit_character = AND_jose_diaz
 recruit_character = AND_jose_enrique_varela
+#Generales/consejeros
 recruit_character = AND_javier_alejandro_borrego
-recruit_character = AND_valentin_gutierrez
-
 recruit_character = AND_juan_modesto	#Militar comunista gaditano
 recruit_character = AND_valentin_gonzalez	#vivió en córdoba xd
+recruit_character = AND_valentin_gutierrez
 
 ####BUENOS CANDIDATOS A GENERALES:
 #Valentín Gutiérrez de Miguel periodista y despues general de brigada y division
@@ -50,10 +51,10 @@ set_politics = {
 }
 
 set_popularities = {
-	democratic = 50
-	fascism = 10
+	democratic = 49
+	fascism = 1
 	communism = 25
-	neutrality = 15
+	neutrality = 25
 }
 
 set_rule = obsolete_focus_branches_visibility

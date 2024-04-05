@@ -48,4 +48,11 @@
  andalucia.10.d:0 "Tras intensas disputas internas sobre el destino de la recien nacido estado andaluz, los distintos partidos que forman el gobierno provisional han decidido darle el gobierno al Partido Comunista Andaluz, una escisión del PCE"
  andalucia.10.o1:0 "El PCE obtiene el gobierno"
 
- 
+### Andalucia comunista negocia con los paises ibéricos: ###
+ andalucia_event_11:0 "¡LAS NACIONES DE IBERIA DEBEN UNIRSE!"
+ andalucia.11.d:0 "La Unión de Repúblicas Socialistas Ibéricas debe nacer. [AND.GetNameDef] nos ofrece la fusión de nuestros respectivos partidos comunistas para la unificación de nuestros estados. Desde Andalucía comienzan las negociaciones para formar un gobierno único entre las diferentes naciones ibéricas para asegurar la estabilidad e integridad territorial de los diferentes miembros de la unión. Debemos estar unidos en estos tiempos combulsos de inestabilidad para no quedarnos atrás, o eso dicen los andaluces."
+ andalucia.11.o1:0 "Debemos volver a unirnos"
+ andalucia.11.o2:0 "Jamas venderíamos nuestra autonomía"
+
+ andalucia_event_12:0 "¡[FROM.GetNameDef] acepta la unión!"
+ andalucia.12.d:0 "Un pueblo unido es un pueblo fuerte y [FROM.GetName] lo sabe. El mundo recordará este día, tras tiempos de oscuridad nos deslumbra el brillo de un futuro prometedor. ¡Vivan los obreros del mundo!"

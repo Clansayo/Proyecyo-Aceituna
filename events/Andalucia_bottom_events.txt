@@ -273,7 +273,7 @@ country_event = {	# Preguntar a paises de la facion revolucionaria de iberia de 
 	id = andalucia.11
 	title = andalucia_event_11
 	desc = andalucia.11.d
-	picture = GFX_report_event_generic_read_write
+	picture = GFX_report_event_and_propaganda_comunista
 	
 	is_triggered_only = yes
 	
@@ -318,11 +318,19 @@ country_event = {	#Respuesta de los ibéricos llega a AND
 	
 	option = { 
 		name = "andalucia.12.o1"
+		FROM = {
+			every_unit_leader = {
+				set_nationality = AND
+			}
+			every_core_state = {
+				add_core_of = AND
+			}
+		}
 		annex_country = {
 			target = FROM
 			transfer_troops = yes
 		}
-		set_cosmetic_tag = AND_andalucia_unifica_comunismo_iberico
+		set_cosmetic_tag = AND_URSI
 		ai_chance = { factor = 100 }
 	}
 }

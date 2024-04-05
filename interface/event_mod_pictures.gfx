@@ -20,4 +20,10 @@ spriteTypes = {
 		name = "GFX_report_event_and_jose_diaz"
 		texturefile = "gfx/event_pictures/report_event_and_jose_diaz.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_report_event_and_propaganda_comunista"
+		texturefile = "gfx/event_pictures/report_event_propaganda_comunista.dds"
+	}
+
 }

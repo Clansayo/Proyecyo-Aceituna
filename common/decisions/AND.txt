@@ -50,6 +50,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 41
+			41 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -76,6 +77,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 170
+			170 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -99,6 +101,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 175
+			175 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -122,6 +125,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 168
+			168 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -145,6 +149,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 167
+			167 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -168,6 +173,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 793
+			793 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -191,6 +197,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 788
+			788 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -214,6 +221,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 174
+			174 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -237,6 +245,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 791
+			791 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -260,6 +269,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 176
+			176 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -283,6 +293,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 166
+			166 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -306,6 +317,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 794
+			794 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -329,6 +341,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 790
+			790 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -352,6 +365,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 177
+			177 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -375,6 +389,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 178
+			178 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -398,6 +413,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 179
+			179 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -421,6 +437,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 795
+			795 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -444,6 +461,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 112
+			112 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -467,6 +485,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 181
+			181 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -490,6 +509,55 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 180
+			180 = { NOT = { is_core_of = AND } }
+		}
+		
+		days_remove = 30
+		remove_effect = {
+			add_state_core = 180
+		}
+	}
+
+	AND_integrar_madeira = { 
+		allowed = { tag = AND }
+		cost = 50
+		icon = GFX_decision_portugal_flag
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 697 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 697
+			697 = { NOT = { is_core_of = AND } }
+		}
+		
+		days_remove = 30
+		remove_effect = {
+			add_state_core = 180
+		}
+	}
+
+	AND_integrar_azores = { 
+		allowed = { tag = AND }
+		cost = 50
+		icon = GFX_decision_portugal_flag
+		
+		on_map_mode = map_and_decisions_view
+		highlight_states = {
+			highlight_state_targets = { state = 698 }
+		}
+		
+		is_good = yes
+		fire_only_once = yes
+
+		visible = {
+			controls_state = 698
+			698 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -513,6 +581,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 171
+			171 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -536,6 +605,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 792
+			792 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -559,6 +629,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 172
+			172 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
@@ -582,6 +653,7 @@ AND_integrar_territorios = {
 
 		visible = {
 			controls_state = 165
+			165 = { NOT = { is_core_of = AND } }
 		}
 		
 		days_remove = 30
