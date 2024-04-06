@@ -1,17 +1,17 @@
 ﻿l_spanish:
 
- #evento1 descripcion: andalucia.1 "¡Andalucía libre!"
+#evento1 descripcion: andalucia.1 "¡Andalucía libre!"
  andalucia.1.d:0 "Tras la masacre de Casas Viejas en 1933, el regionalismo andaluz se vió fortalecido y dirigido en contra del gobierno republicano. Tras varios intentos de conseguir una mayor autonomía, se formuló el estatuto de autonomía andaluz gracias en parte a la labor de Blas Infante. Al mismo tiempo, otros gobiernos autonómicos aparecieron en otras regiones de España. Debido a estos cambios y a la inestabilidad del gobierno republicano, un grupo de militares organizan un golpe de estado tomando el control del gobierno. A lo que el recien gobierno autonómico de cataluña reclama la completa independencia, a lo que le siguen Andalucía, Pais Vasco y Galicia"
  andalucia.1.o2:0 "Van a ser tiempos difíciles..."
  
- #Union andalucia españa democracito:
+#Union andalucia españa democracito:
  andalucia_pide_union:0 "Andalucía pide unirse a España"
  andalucia.2.d:0 "¡Andalucía se acerca democrácticamente a nuestra nación!. El sentimiento español por parte de los andaluces se ha hecho manifiesto. El acuerdo de integrar la región de andalucía al Estado Español está siendo negociado. Los andaluces piden una alta autonomía, incluso mayor a la de su previo estatuto de autonomía. ¿Deberíamos llegar a un acuerdo?"
  andalucia.2.o1:0 "Bienvenidos de nuevo a España"
  andalucia.2.o2:0 "Este no es el camino"
  
  
- ### Andalucia negcia entrar a los aliados: ###
+### Andalucia negcia entrar a los aliados: ###
  andalucia_event_3:0 "Negociar unirse a los [ENG.GetFactionName]"
  andalucia.3.d:0 "Debemos entrar a los [ENG.GetFactionName] para proteger la democracia del mundo. No obstante, este movimiento supondrá un gran riesgo para los andaluces. ¿Debemos pedir algo a cambio?"
  andalucia.3.o1:0 "Exigir Gibraltar."
@@ -43,16 +43,32 @@
  andalucia.9.d:0 "[ENG.GetNameDef] no considera suficientemente valiosa una alianza con nosotros. Una vez mas vemos un claro ejemplo de incompetencia por parte de la nación británica..."
  andalucia.9.o1:0 "Este rechazo será recordado"
  
- ###  Andalucia se vuevle comunista ###
+###  Andalucia se vuevle comunista ###
  andalucia_event_10:0 "El pueblo andaluz abraza el comunismo"
  andalucia.10.d:0 "Tras intensas disputas internas sobre el destino de la recien nacido estado andaluz, los distintos partidos que forman el gobierno provisional han decidido darle el gobierno al Partido Comunista Andaluz, una escisión del PCE"
  andalucia.10.o1:0 "El PCE obtiene el gobierno"
 
-### Andalucia comunista negocia con los paises ibéricos: ###
+### Andalucia comunista negocia con los paises de su faccion la unificacion: ###
  andalucia_event_11:0 "¡LAS NACIONES DE IBERIA DEBEN UNIRSE!"
  andalucia.11.d:0 "La Unión de Repúblicas Socialistas Ibéricas debe nacer. [AND.GetNameDef] nos ofrece la fusión de nuestros respectivos partidos comunistas para la unificación de nuestros estados. Desde Andalucía comienzan las negociaciones para formar un gobierno único entre las diferentes naciones ibéricas para asegurar la estabilidad e integridad territorial de los diferentes miembros de la unión. Debemos estar unidos en estos tiempos combulsos de inestabilidad para no quedarnos atrás, o eso dicen los andaluces."
  andalucia.11.o1:0 "Debemos volver a unirnos"
  andalucia.11.o2:0 "Jamas venderíamos nuestra autonomía"
 
  andalucia_event_12:0 "¡[FROM.GetNameDef] acepta la unión!"
- andalucia.12.d:0 "Un pueblo unido es un pueblo fuerte y [FROM.GetName] lo sabe. El mundo recordará este día, tras tiempos de oscuridad nos deslumbra el brillo de un futuro prometedor. ¡Vivan los obreros del mundo!"
+ andalucia.12.d:0 "Un pueblo unido es un pueblo fuerte y [FROM.GetName] lo sabe. El mundo recordará este día, tras tiempos de oscuridad nos deslumbra el brillo de un futuro prometedor. ¡Vivan los obreros andaluces, ibéricos y del mundo!"
+ andalucia.12.o1:0 "El futuro promete"
+
+### Andalucia pide pacto de no agresion con sov: ###
+ andalucia_event_13:0 "[AND.GetNameDef] nos ofrece un pacto de no agresión y garantía"
+ andalucia.13.d:0 "La [AND.GetName] está viviendo tiempos de cambio, no obstante nuestras similitudes ideológicas podrían tender puentes entre nuestras naciones. En estos tiempos no nos vendrían mal amigos en la entrada del mediterraneo."
+ andalucia.13.o1:0 "Debemos firmar el pacto"
+ andalucia.13.o2:0 "No nos interesa"
+
+ andalucia_event_14:0 "Rusia acepta el pacto"
+ andalucia.14.d:0 "[SOV.GetNameDef] acepta nuestra oferta, esperamos que este movimiento sirva para tender puentes entre nuestras naciones. El comunismo internacional debe estar unido y ser un bloque sólido y fuerte si queremos hacer frente a las amenazas que parecen surgir en el mundo."
+ andalucia.14.o1:0 "Esto asegurará la paz, o nuestra victoria"
+
+ andalucia_event_15:0 "Rusia rechaza el pacto"
+ andalucia.15.d:0 "[SOV.GetNameDef] ha rechazado nuestro pacto de no agresión y garantía. Pese a nuestras similitudes ideológicas no han considerado suficientes los beneficios de este acuerdo. Aunque esto sea un duro golpe para el reconocimiento internacional de nuestra nación, esto no deberia ser suficiente para dentenernos."
+ andalucia.15.o1:0 "No necesitamos su apoyo"
+

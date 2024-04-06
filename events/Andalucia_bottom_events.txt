@@ -76,11 +76,24 @@ country_event = {	# Andalucia negocia la entrada a los aliados
 	option = {	#Pides gibraltar
 		name = "andalucia.3.o1"
 		ENG = { country_event = { id = andalucia.4 hours = 15 } }
+
+		custom_effect_tooltip = if_they_accept_tt
+		effect_tooltip = {
+			ENG = { add_to_faction = AND }
+			AND = { set_state_owner = 118 }
+		}
+
 		ai_chance = { factor = 100 }
 	}
 	option = { #Pides unirte sinmas
 		name = "andalucia.3.o2"
 		ENG = { country_event = { id = andalucia.7 hours = 15 } }
+
+		custom_effect_tooltip = if_they_accept_tt
+		effect_tooltip = {
+			ENG = { add_to_faction = AND }
+		}
+
 		ai_chance = { factor = 0 }
 	}
 }
@@ -306,7 +319,7 @@ country_event = {	#Respuesta de los ibéricos llega a AND
 	id = andalucia.12
 	title = andalucia_event_12
 	desc = andalucia.12.d
-	#picture = GFX_report_event_ronda_1918
+	picture = GFX_report_event_and_SPA_CNT_FAI
 	
 	is_triggered_only = yes
 	
@@ -330,7 +343,12 @@ country_event = {	#Respuesta de los ibéricos llega a AND
 			target = FROM
 			transfer_troops = yes
 		}
-		set_cosmetic_tag = AND_URSI
+		if = {
+			limit = {
+				not = { has_cosmetic_tag = AND_URSI}
+			}
+			set_cosmetic_tag = AND_URSI
+		}
 		ai_chance = { factor = 100 }
 	}
 }
@@ -340,7 +358,7 @@ country_event = {	#Andalucia pide pacto no agresion a la urss
 	id = andalucia.13
 	title = andalucia_event_13
 	desc = andalucia.13.d
-	#picture = GFX_report_event_ronda_1918
+	picture = GFX_report_event_stalin_02
 	
 	is_triggered_only = yes
 	
@@ -367,7 +385,7 @@ country_event = {	#La urss acepta el pacto de no agresión
 	id = andalucia.14
 	title = andalucia_event_14
 	desc = andalucia.14.d
-	#picture = GFX_report_event_ronda_1918
+	picture = GFX_report_event_stalin_02
 	
 	is_triggered_only = yes
 	
@@ -383,6 +401,8 @@ country_event = {	#La urss acepta el pacto de no agresión
 			country = SOV
 			relation = non_aggression_pact 
 		}
+		SOV = { give_guarantee = AND }
+		AND = { give_guarantee = SOV }
 		ai_chance = { factor = 100 }
 	}
 }
@@ -391,7 +411,7 @@ country_event = {	#La urss rechaza el pacto de no agresión
 	id = andalucia.15
 	title = andalucia_event_15
 	desc = andalucia.15.d
-	#picture = GFX_report_event_ronda_1918
+	picture = GFX_report_event_stalin_02
 	
 	is_triggered_only = yes
 	

@@ -26,4 +26,8 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/report_event_propaganda_comunista.dds"
 	}
 
+	spriteType = {
+		name = "GFX_report_event_and_SPA_CNT_FAI"
+		texturefile = "gfx/event_pictures/kaiserreich/SPA_CNT_FAI.png"
+	}
 }

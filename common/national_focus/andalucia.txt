@@ -2825,8 +2825,9 @@
 		relative_position_id = AND_invitar_a_la_union
 		x = 0
 		y = 1
-		
+
 		available = {
+			
 		}
 		
 		prerequisite = { focus = AND_invitar_a_la_union }
@@ -2840,7 +2841,7 @@
 			}
 			if = {
 				limit = {
-						SPR = { is_in_faction_with = AND }
+					SPR = { is_in_faction_with = AND }
 				}
 				SPR = { country_event = { id = andalucia.11 hours = 6 } } 
 			}
@@ -2883,6 +2884,7 @@
 		y = 1
 		
 		available = {
+			SOV = { has_government = communism }
 		}
 		
 		prerequisite = { focus = AND_unificar_las_republicas }
@@ -2931,6 +2933,16 @@
 						SPR = NOT = { { is_in_faction_with = AND } }
 					}
 				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = SPR
+					value = 100
+				}
+				add_ai_strategy = {
+					type = declare_war
+					id = SPR
+					value = 30
+				}
 				create_wargoal = {
 					type = take_state_focus
 					target = SPR
@@ -2943,6 +2955,16 @@
 						country_exists = CAT
 						CAT = NOT = { { is_in_faction_with = AND } }
 					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = CAT
+					value = 100
+				}
+				add_ai_strategy = {
+					type = declare_war
+					id = CAT
+					value = 60
 				}
 				create_wargoal = {
 					type = take_state_focus
@@ -2957,6 +2979,16 @@
 						POR = NOT = { { is_in_faction_with = AND } }
 					}
 				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = POR
+					value = 100
+				}
+				add_ai_strategy = {
+					type = declare_war
+					id = POR
+					value = 50
+				}
 				create_wargoal = {
 					type = take_state_focus
 					target = POR
@@ -2970,6 +3002,16 @@
 						GLC = NOT = { { is_in_faction_with = AND } }
 					}
 				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = GLC
+					value = 100
+				}
+				add_ai_strategy = {
+					type = declare_war
+					id = GLC
+					value = 60
+				}
 				create_wargoal = {
 					type = take_state_focus
 					target = GLC
@@ -2982,6 +3024,16 @@
 						country_exists = NAV
 						NAV = NOT = { { is_in_faction_with = AND } }
 					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = NAV
+					value = 100
+				}
+				add_ai_strategy = {
+					type = declare_war
+					id = NAV
+					value = 60
 				}
 				create_wargoal = {
 					type = take_state_focus
@@ -3006,7 +3058,7 @@
 		cost = 5
 		relative_position_id = AND_subyugar_iberia
 		x = 2
-		y = 1
+		y = 2
 		
 		available = {
 		}
@@ -3027,17 +3079,18 @@
 	}
 	
 	focus = {
-		id = AND_custion_africana 
+		id = AND_cuestion_africana 
 		icon = GFX_and_cuestion_africana
 		cost = 5
-		relative_position_id = AND_extender_la_revolucion
-		x = -3
+		relative_position_id = AND_camino_andaluz
+		x = -2
 		y = 1
 		
 		available = {
+			is_subject = no
 		}
 		
-		prerequisite = { focus = AND_extender_la_revolucion }
+		prerequisite = { focus = AND_modelo_sovietico focus = AND_camino_andaluz }
 		
 		completion_reward = {
 			
@@ -3061,12 +3114,72 @@
 		y = 1
 		
 		available = {
+			is_subject = no
 		}
 		
 		prerequisite = { focus = AND_extender_la_revolucion }
 		
 		completion_reward = {
-			
+			if = {
+				limit = {
+					FRA = { 
+						OR = { 
+							has_government = democratic
+							has_government = neutrality
+						}
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = FRA
+					expire = 0
+				}
+			}
+			if = {
+				limit = {
+					ENG = { 
+						OR = { 
+							has_government = democratic
+							has_government = neutrality
+						}
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = ENG
+					expire = 0
+				}
+			}
+			if = {
+				limit = {
+					ITA = { 
+						OR = { 
+							has_government = democratic
+							has_government = neutrality
+						}
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = ITA
+					expire = 0
+				}
+			}
+			if = {
+				limit = {
+					GER = { 
+						OR = { 
+							has_government = democratic
+							has_government = neutrality
+						}
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = GER
+					expire = 0
+				}
+			}
 		}
 		
 		ai_will_do = {
@@ -3087,12 +3200,60 @@
 		y = 1
 		
 		available = {
+			is_subject = no
 		}
 		
 		prerequisite = { focus = AND_extender_la_revolucion }
 		
 		completion_reward = {
-			
+			if = {
+				limit = {
+					GER = { 
+						has_government = fascism
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = GER
+					expire = 0
+				}
+			}
+			if = {
+				limit = {
+					ITA = { 
+						has_government = fascism
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = ITA
+					expire = 0
+				}
+			}
+			if = {
+				limit = {
+					FRA = { 
+						has_government = fascism
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = FRA
+					expire = 0
+				}
+			}
+			if = {
+				limit = {
+					ENG = { 
+						has_government = fascism
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = ENG
+					expire = 0
+				}
+			}
 		}
 		
 		ai_will_do = {
@@ -3113,12 +3274,72 @@
 		y = 1
 		
 		available = {
+			is_subject = no
+			country_exists = USA
+			NOT = { is_in_faction_with = USA }
+			NOT = { has_non_aggression_pact_with = USA }
 		}
 		
 		prerequisite = { focus = AND_extender_la_revolucion }
 		
 		completion_reward = {
-			
+			create_wargoal = {
+				type = take_state_focus
+				target = USA
+				expire = 0
+			}
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+	}
+
+	focus = {
+		id = AND_el_gigante_rojo
+		icon = GFX_focus_attack_soviet
+		cost = 5
+		relative_position_id = AND_extender_la_revolucion
+		x = -3
+		y = 1
+		
+		available = {
+			is_subject = no
+			country_exists = SOV
+			NOT = { is_in_faction_with = SOV }
+			NOT = { has_non_aggression_pact_with = SOV }
+		}
+
+		select_effect = {
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = SOV
+				value = 100
+			}
+		}
+
+		prerequisite = { focus = AND_extender_la_revolucion }
+		
+		completion_reward = {
+			add_war_support = 0.1
+			create_wargoal = {
+				type = take_state_focus
+				target = SOV
+				expire = 0
+			}
+			add_timed_idea = {
+				idea = FIN_soviet_threat
+				days = 730
+			}
+			add_ai_strategy = {
+				type = declare_war
+				id = SOV
+				value = 50
+			}
 		}
 		
 		ai_will_do = {
@@ -3134,14 +3355,14 @@
 		id = AND_guiar_territorios_africanos
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		cost = 5
-		relative_position_id = AND_custion_africana 
+		relative_position_id = AND_cuestion_africana 
 		x = 0
 		y = 1
 		
 		available = {
 		}
 		
-		prerequisite = { focus = AND_custion_africana  }
+		prerequisite = { focus = AND_cuestion_africana  }
 		
 		completion_reward = {
 			
@@ -3165,6 +3386,7 @@
 		y = 1
 		
 		available = {
+			is_in_faction = yes
 		}
 		
 		prerequisite = { focus = AND_guiar_territorios_africanos  }
@@ -3205,6 +3427,16 @@
 				limit {
 					SPR = { NOT { has_government = communism} }
 				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = SPR
+					value = 100
+				}
+				add_ai_strategy = {
+					type = declare_war
+					id = SPR
+					value = 40
+				}
 				create_wargoal = {
 					type = take_state_focus
 					target = SPR
@@ -3214,6 +3446,16 @@
 			if = {
 				limit {
 					CAT = { NOT { has_government = communism} }
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = CAT
+					value = 100
+				}
+				add_ai_strategy = {
+					type = declare_war
+					id = CAT
+					value = 60
 				}
 				create_wargoal = {
 					type = take_state_focus
@@ -3225,6 +3467,16 @@
 				limit {
 					POR = { NOT { has_government = communism} }
 				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = POR
+					value = 100
+				}
+				add_ai_strategy = {
+					type = declare_war
+					id = POR
+					value = 50
+				}
 				create_wargoal = {
 					type = take_state_focus
 					target = POR
@@ -3235,6 +3487,16 @@
 				limit {
 					NAV = { NOT { has_government = communism} }
 				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = NAV
+					value = 100
+				}
+				add_ai_strategy = {
+					type = declare_war
+					id = NAV
+					value = 60
+				}
 				create_wargoal = {
 					type = take_state_focus
 					target = NAV
@@ -3244,6 +3506,16 @@
 			if = {
 				limit {
 					GLC = { NOT { has_government = communism} }
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = GLC
+					value = 100
+				}
+				add_ai_strategy = {
+					type = declare_war
+					id = GLC
+					value = 60
 				}
 				create_wargoal = {
 					type = take_state_focus
