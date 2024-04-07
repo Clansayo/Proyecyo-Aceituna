@@ -3,7 +3,7 @@
 # Cosas no se como llamarlas que no son focuses
  and_union_revolucionaria_iberica:0 "Unión Revolucionaria Ibérica"
     
- # PLAN DESARROLLO
+# PLAN DESARROLLO
   AND_plan_desarrollo:0 "Plan de desarrollo regional"
   AND_mejorar_condiciones_mineros:0 "Mejorar las condiciones de los mineros"
   AND_promover_industria_minera:0 "Promover la industria minera"
@@ -44,7 +44,10 @@
   AND_el_anarquismo_andaluz:0 "El pueblo contra el Estado"
   
     
- # IDENTIDAD ANDALUZA
+# IDENTIDAD ANDALUZA
  AND_regionalismo_andaluz:0 "Identidad andaluza"
  AND_regionalismo_andaluz_desc:0 "Desde el siglo XIX el sentimiento regionalista andaluz ha ido en aumento, es hora de consolidar el andalucismo"
  
+# Rama democrática
+AND_devuelvan_el_moai:0 "Devuelvan el moai"
+AND_devuelvan_el_moai_desc:0 "Aunque a simple vista la nación andaluza y el criminal robo del moai Hoa Hakananai'a acontecido en 1869 por el Imperio Británico no tienen mucho que ver, los andaluces desean aprovechar su acercamiento a [ENG.GetNameDef] para que se arregle esta injusticia de su pasado. Debemos exigir a los ingleses que le devuelvan el Moai a Chile cuanto antes, suficiente tiempo lo han tenido ya..."
