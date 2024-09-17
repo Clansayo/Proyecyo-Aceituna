@@ -3129,7 +3129,64 @@
 		prerequisite = { focus = AND_modelo_sovietico focus = AND_camino_andaluz }
 		
 		completion_reward = {
-			
+			290 = {
+				owner = {
+					if = {
+						limit = {
+							num_of_controlled_states > 10
+						}
+						add_political_power = 290
+					}
+				}
+			}
+			783 = {
+				owner = {
+					if = {
+						limit = {
+							limit = {
+								num_of_controlled_states > 10
+							}
+						}
+						add_political_power = 783
+					}
+				}
+			}
+			699 = {
+				owner = {
+					if = {
+						limit = {
+							limit = {
+								num_of_controlled_states > 10
+							}
+						}
+						add_political_power = 699
+					}
+				}
+			}
+			297 = {
+				owner = {
+					if = {
+						limit = {
+							limit = {
+								num_of_controlled_states > 10
+							}
+						}
+						add_political_power = 297
+					}
+				}
+			}
+			178 = {
+				owner = {
+					if = {
+						limit = {
+							limit = {
+								num_of_controlled_states > 10
+							}
+						}
+						add_political_power = 178
+					}
+				}
+			}
 		}
 		
 		ai_will_do = {
