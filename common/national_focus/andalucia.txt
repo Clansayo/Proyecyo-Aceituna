@@ -3133,7 +3133,8 @@
 				owner = {
 					if = {
 						limit = {
-							num_of_controlled_states > 10
+							num_of_controlled_states > 3
+							controls_or_subject_of  = no
 						}
 						add_political_power = 290
 					}
@@ -3143,9 +3144,8 @@
 				owner = {
 					if = {
 						limit = {
-							limit = {
-								num_of_controlled_states > 10
-							}
+							num_of_controlled_states > 3
+							controls_or_subject_of  = no
 						}
 						add_political_power = 783
 					}
@@ -3155,9 +3155,8 @@
 				owner = {
 					if = {
 						limit = {
-							limit = {
-								num_of_controlled_states > 10
-							}
+							num_of_controlled_states > 3
+							controls_or_subject_of  = no
 						}
 						add_political_power = 699
 					}
@@ -3167,9 +3166,8 @@
 				owner = {
 					if = {
 						limit = {
-							limit = {
-								num_of_controlled_states > 10
-							}
+							num_of_controlled_states > 3
+							controls_or_subject_of  = no
 						}
 						add_political_power = 297
 					}
@@ -3179,9 +3177,8 @@
 				owner = {
 					if = {
 						limit = {
-							limit = {
-								num_of_controlled_states > 10
-							}
+							num_of_controlled_states > 3
+							controls_or_subject_of  = no
 						}
 						add_political_power = 178
 					}

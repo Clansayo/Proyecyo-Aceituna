@@ -426,3 +426,160 @@ country_event = {	#La urss rechaza el pacto de no agresión
 		ai_chance = { factor = 100 }
 	}
 }
+
+####	GUIAR A LOS TERRITORIOS AFRICANOS	####
+
+country_event = {	#Andalucia pide pacto no agresion a la urss
+	id = andalucia.16
+	title = andalucia_event_16
+	desc = andalucia.16.d
+	picture = GFX_report_event_stalin_02
+	
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	fire_only_once = yes
+	
+	option = {	#Ceden los territorios africanos a su independencia
+		name = "Ceden los territorios africanos a su independencia" #andalucia.16.o1"
+		ROOT = {
+			if = {
+				limit = {
+					290 = {
+						is_controlled_by = ROOT
+					}
+				}
+				290 = {
+					transfer_state_to = MOR
+				}
+			}
+			if = {
+				limit = {
+					783 = {
+						is_controlled_by = ROOT
+					}
+				}
+				783 = {
+					transfer_state_to = MOR
+				}
+			}
+			if = {
+				limit = {
+					699 = {
+						is_controlled_by = ROOT
+					}
+				}
+				699 = {
+					transfer_state_to = WES
+				}
+			}
+			if = {
+				limit = {
+					297 = {
+						is_controlled_by = ROOT
+					}
+				}
+				297 = {
+					transfer_state_to = EQG
+				}
+			}
+			if = {
+				limit = {
+					178 = {
+						is_controlled_by = ROOT
+					}
+				}
+				178 = {
+					transfer_state_to = MOR
+				}
+			}
+			
+		}
+			
+		#ai_chance = { factor = 100 }
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 6
+				threat > 0.2
+			}
+			modifier = {
+				factor = 10
+				threat > 0.5
+			}
+			modifier = {
+				factor = 15
+				threat > 0.7
+			}
+			modifier = {
+				factor = 200
+				threat > 0.8
+			}
+		}
+	}
+
+	option = { 
+		name = "andalucia.16.o2"
+		ROOT = {
+			if = {
+				limit = {
+					290 = {
+						is_controlled_by = ROOT
+					}
+				}
+				290 = {
+					add_resistance = 50
+					add_compliance = -10
+				}
+			}
+			if = {
+				limit = {
+					783 = {
+						is_controlled_by = ROOT
+					}
+				}
+				783 = {
+					add_resistance = 50
+					add_compliance = -10
+				}
+			}
+			if = {
+				limit = {
+					699 = {
+						is_controlled_by = ROOT
+					}
+				}
+				699 = {
+					add_resistance = 50
+					add_compliance = -10
+				}
+			}
+			if = {
+				limit = {
+					297 = {
+						is_controlled_by = ROOT
+					}
+				}
+				297 = {
+					add_resistance = 50
+					add_compliance = -10
+				}
+			}
+			if = {
+				limit = {
+					178 = {
+						is_controlled_by = ROOT
+					}
+				}
+				178 = {
+					add_resistance = 50
+					add_compliance = -10
+				}
+			}
+		}
+		ai_chance = { factor = 10 }
+	}
+}
