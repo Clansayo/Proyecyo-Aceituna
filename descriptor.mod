@@ -1,6 +1,6 @@
 version="0.1"
 tags={
-	"Utilities"
+	"Alternative History"
 }
-name="test_mod1"
-supported_version="1.13.6"
+name="proyectoAceituna"
+supported_version="1.14.10"

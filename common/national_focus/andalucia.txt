@@ -2966,7 +2966,7 @@
 				limit = {
 					AND = { 
 						country_exists = SPR
-						SPR = NOT = { { is_in_faction_with = AND } }
+						SPR = { NOT =  { is_in_faction_with = AND } }
 					}
 				}
 				add_ai_strategy = {
@@ -2989,7 +2989,7 @@
 				limit = {
 					AND = { 
 						country_exists = CAT
-						CAT = NOT = { { is_in_faction_with = AND } }
+						CAT = { NOT =  { is_in_faction_with = AND } }
 					}
 				}
 				add_ai_strategy = {
@@ -3012,7 +3012,7 @@
 				limit = {
 					AND = { 
 						country_exists = POR
-						POR = NOT = { { is_in_faction_with = AND } }
+						POR = { NOT =  { is_in_faction_with = AND } }
 					}
 				}
 				add_ai_strategy = {
@@ -3035,7 +3035,7 @@
 				limit = {
 					AND = { 
 						country_exists = GLC
-						GLC = NOT = { { is_in_faction_with = AND } }
+						GLC = { NOT =  { is_in_faction_with = AND } }
 					}
 				}
 				add_ai_strategy = {
@@ -3058,7 +3058,7 @@
 				limit = {
 					AND = { 
 						country_exists = NAV
-						NAV = NOT = { { is_in_faction_with = AND } }
+						NAV = { NOT =  { is_in_faction_with = AND } }
 					}
 				}
 				add_ai_strategy = {
@@ -3136,7 +3136,7 @@
 							num_of_controlled_states > 3
 							controls_or_subject_of  = no
 						}
-						add_political_power = 290
+						290 = { add_resistance = 50  add_resistance_target = 30 add_compliance = -60}
 					}
 				}
 			}
@@ -3147,7 +3147,7 @@
 							num_of_controlled_states > 3
 							controls_or_subject_of  = no
 						}
-						add_political_power = 783
+						783 = { add_resistance = 50  add_resistance_target = 30 add_compliance = -60}
 					}
 				}
 			}
@@ -3158,7 +3158,7 @@
 							num_of_controlled_states > 3
 							controls_or_subject_of  = no
 						}
-						add_political_power = 699
+						699 = { add_resistance = 50  add_resistance_target = 30 add_compliance = -60}
 					}
 				}
 			}
@@ -3169,7 +3169,7 @@
 							num_of_controlled_states > 3
 							controls_or_subject_of  = no
 						}
-						add_political_power = 297
+						297 = { add_resistance = 50  add_resistance_target = 30 add_compliance = -60}
 					}
 				}
 			}
@@ -3180,7 +3180,7 @@
 							num_of_controlled_states > 3
 							controls_or_subject_of  = no
 						}
-						add_political_power = 178
+						178 = { add_resistance = 50  add_resistance_target = 30 add_compliance = -60}
 					}
 				}
 			}
@@ -3455,7 +3455,13 @@
 		prerequisite = { focus = AND_cuestion_africana  }
 		
 		completion_reward = {
-			
+			CNI = { 
+				set_state_owner = 178
+				
+			}
+			MOR = { set_state_owner = 290 set_state_owner = 783}
+			WES = { set_state_owner = 699}
+			EQG = { set_state_owner = 297}
 		}
 		
 		ai_will_do = {

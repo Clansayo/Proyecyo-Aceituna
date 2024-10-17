@@ -1,5 +1,23 @@
 ﻿l_spanish:
 
+ CNI_fascism: "Canarias"
+ CNI_fascism_DEF: "El estado Canario"
+ CNI_democratic: "República de las islas Canarias"
+ CNI_democratic_DEF: "La República Canaria"
+ CNI_neutrality: "Reino de Canarias"
+ CNI_neutrality_DEF: "El Reino de Canarias"
+ CNI_communism: "República Socialista Canaria"
+ CNI_communism_DEF: "La República Socialista Canaria"
+ CNI_fascism_ADJ: "de Canarias"
+ CNI_democratic_ADJ: "de la República Canaria"
+ CNI_neutrality_ADJ: "del Reino de Canarias"
+ CNI_communism_ADJ: "de la República Socialista Canaria"
+ CNI: "Canarias"
+ CNI_DEF: "la Nación Canaria"
+ CNI_ADJ: "de Canarias"
+ CNI_subject: "$OVERLORDADJ$ $CNI$"
+ CNI_subject_DEF: "$OVERLORDADJ$ $CNI$"
+
  RSE_fascism: "Republica Socialista Española"
  RSE_fascism_DEF: "Republica Socialista Española"
  RSE_democratic: "Republica Socialista Española"
